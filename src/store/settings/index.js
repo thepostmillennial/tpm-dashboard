@@ -17,7 +17,7 @@ export default {
   state: {
     ...STORED_SETTINGS({
       authProvider: 'firebase', // firebase, jwt
-      logo: 'Clean UI Pro',
+      logo: 'TPM Dashboaard',
       locale: 'en-US',
       isSidebarOpen: false,
       isSupportChatOpen: false,

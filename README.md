@@ -1,6 +1,6 @@
 # TPM Dashboard Project
 
-### Clean UI Pro Vue Admin Template Preview
+### TPM Dashboaard Admin Template Preview
 
 https://vue.cleanui.cloud
 

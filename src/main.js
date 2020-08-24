@@ -24,7 +24,7 @@ Vue.use(VueLayers)
 
 Vue.use(NProgress)
 Vue.use(VuePageTitle, {
-  prefix: 'Clean UI Pro Vue | ',
+  prefix: 'TPM Dashboaard | ',
   router,
 })
 

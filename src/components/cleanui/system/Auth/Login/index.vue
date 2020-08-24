@@ -8,7 +8,7 @@
         Pluggable enterprise-level application framework.
         <br />An excellent front-end solution for web applications built upon Ant Design.
         <br />Credentials for testing purposes -
-        <strong>demo@sellpixels.com</strong> /
+        <strong>demo@thepm.news</strong> /
         <strong>demo123</strong>
       </p>
     </div>
@@ -42,7 +42,7 @@
           <a-input
             size="large"
             placeholder="Email"
-            v-decorator="['email', { initialValue: 'demo@sellpixels.com', rules: [{ required: true, message: 'Please input your username!' }]}]"
+            v-decorator="['email', { initialValue: 'demo@thepm.news', rules: [{ required: true, message: 'Please input your username!' }]}]"
           />
         </a-form-item>
         <a-form-item>
