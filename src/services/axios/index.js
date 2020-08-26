@@ -3,8 +3,6 @@ import store from 'store'
 import { notification } from 'ant-design-vue'
 import config from '@/configs'
 
-console.log(config)
-
 const apiClient = axios.create({
   baseURL: config.api.base,
   timeout: 2000,
@@ -22,12 +20,18 @@ apiClient.interceptors.request.use(request => {
 
 apiClient.interceptors.response.use(undefined, error => {
   // Errors handling
-  const { response } = error
-  const { data } = response
-  if (data) {
-    notification.warning({
-      message: data.error || data.message || 'Someting is wrong, try it later...',
-    })
+  if (error) {
+    if (error.response) {
+      const { response } = error
+      const { data } = response
+      if (data) {
+        notification.warning({ message: data.error || data.message || 'Someting is wrong, try it later...' })
+      }
+    } else {
+      notification.error({ message: error.message })
+    }
+  } else {
+    notification.warning({ message: 'Unknown errors, try it later...' })
   }
 })
 

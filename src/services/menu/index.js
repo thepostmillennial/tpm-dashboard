@@ -1,6 +1,23 @@
 export const getMenuData = [
   {
     category: true,
+    title: 'Content',
+  },
+  {
+    title: 'Content',
+    key: 'content',
+    icon: 'fe fe-edit',
+    // roles: ['admin'], // set user roles with access to this route
+    children: [
+      {
+        title: 'Editors\' Picks',
+        key: 'editorspicks',
+        url: '/content/editorspicks',
+      },
+    ],
+  },
+  {
+    category: true,
     title: 'Dashboards',
   },
   {

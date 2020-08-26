@@ -6,8 +6,7 @@
       </h1>
       <p>
         The Administration Dashboard for The Post Millennial
-        <br />Credentials for testing purposes -
-        <strong>demo@thepm.news</strong> /
+        <br />Credentials for testing purposes - <strong>demo@thepm.news</strong> /
         <strong>demo123</strong>
       </p>
     </div>
@@ -15,33 +14,18 @@
       <div class="text-dark font-size-24 mb-3">
         <strong>Sign in to your account</strong>
       </div>
-      <!-- <div class="mb-4">
-        <a-radio-group
-          :value="settings.authProvider"
-          @change="e => changeAuthProvider(e.target.value)"
-        >
-          <a-radio value="firebase">Firebase</a-radio>
-          <a-radio value="jwt">JWT</a-radio>
-          <a-tooltip>
-            <template slot="title">
-              <span>Read Docs Guide</span>
-            </template>
-            <a-radio value="auth0" disabled>Auth0</a-radio>
-          </a-tooltip>
-          <a-tooltip>
-            <template slot="title">
-              <span>Read Docs Guide</span>
-            </template>
-            <a-radio value="strapi" disabled>Strapi</a-radio>
-          </a-tooltip>
-        </a-radio-group>
-      </div> -->
       <a-form class="mb-4" :form="form" @submit="handleSubmit">
         <a-form-item>
           <a-input
             size="large"
-            placeholder="Email"
-            v-decorator="['email', { initialValue: 'demo@thepm.news', rules: [{ required: true, message: 'Please input your username!' }]}]"
+            placeholder="Email/Username"
+            v-decorator="[
+              'identity',
+              {
+                initialValue: 'demo@thepm.news',
+                rules: [{ required: true, message: 'Please input your Username/Email!' }],
+              },
+            ]"
           />
         </a-form-item>
         <a-form-item>
@@ -49,16 +33,13 @@
             size="large"
             placeholder="Password"
             type="password"
-            v-decorator="['password', {initialValue: 'demo123', rules: [{ required: true, message: 'Please input your Password!' }]}]"
+            v-decorator="[
+              'password',
+              { initialValue: 'demo123', rules: [{ required: true, message: 'Please input your Password!' }] },
+            ]"
           />
         </a-form-item>
-        <a-button
-          type="primary"
-          htmlType="submit"
-          size="large"
-          class="text-center w-100"
-          :loading="loading"
-        >
+        <a-button type="primary" htmlType="submit" size="large" class="text-center w-100" :loading="loading">
           <strong>Sign in</strong>
         </a-button>
       </a-form>
@@ -93,14 +74,12 @@ export default {
     handleSubmit(e) {
       e.preventDefault()
       this.form.validateFields((err, values) => {
-        if (!err) {
-          this.$store.dispatch('user/LOGIN', { payload: values })
-        }
+        if (!err) this.$store.dispatch('user/LOGIN', { payload: values })
       })
     },
   },
 }
 </script>
 <style lang="scss" module>
-@import "@/components/cleanui/system/Auth/style.module.scss";
+@import '@/components/cleanui/system/Auth/style.module.scss';
 </style>

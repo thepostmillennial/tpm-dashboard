@@ -27,12 +27,19 @@ export default {
   state: {
     id: '',
     name: '',
-    role: '',
+    display_name: '',
     email: '',
+    phone: '',
     avatar: '',
-    authorized: process.env.VUE_APP_AUTHENTICATED || false, // false is default value
+    role: [],
+    authorized: false, // false is default value
     loading: false,
   },
+
+  getters: {
+    user: state => state,
+  },
+
   mutations: {
     SET_STATE(state, payload) {
       Object.assign(state, {
@@ -41,33 +48,26 @@ export default {
     },
   },
   actions: {
+
     LOGIN({ commit, dispatch, rootState }, { payload }) {
-      const { email, password } = payload
-      commit('SET_STATE', {
-        loading: true,
-      })
+      const { identity, password } = payload
+      commit('SET_STATE', { loading: true })
 
       const login = mapAuthProviders[rootState.settings.authProvider].login
-      login(email, password).then(success => {
+      login(identity, password).then(success => {
         if (success) {
           dispatch('LOAD_CURRENT_ACCOUNT')
           Vue.prototype.$notification.success({
             message: 'Logged In',
-            description: 'You have successfully logged in to Air UI Vue Admin Template!',
+            description: 'You have successfully logged in to The Administration Dashboard for The Post Millennial!',
           })
-        }
-        if (!success) {
-          commit('SET_STATE', {
-            loading: false,
-          })
-        }
+        } else { commit('SET_STATE', { loading: false }) }
       })
     },
+
     REGISTER({ commit, dispatch, rootState }, { payload }) {
       const { email, password, name } = payload
-      commit('SET_STATE', {
-        loading: true,
-      })
+      commit('SET_STATE', { loading: true })
 
       const register = mapAuthProviders[rootState.settings.authProvider].register
       register(email, password, name).then(success => {
@@ -77,46 +77,65 @@ export default {
             message: 'Succesful Registered',
             description: 'You have successfully registered!',
           })
-        }
-        if (!success) {
-          commit('SET_STATE', {
-            loading: false,
-          })
+        } else {
+          commit('SET_STATE', { loading: false })
         }
       })
     },
-    LOAD_CURRENT_ACCOUNT({ commit, rootState }) {
-      commit('SET_STATE', {
-        loading: true,
-      })
 
-      const currentAccount = mapAuthProviders[rootState.settings.authProvider].currentAccount
-      currentAccount().then(response => {
-        if (response) {
-          const { id, email, name, avatar, role } = response
-          commit('SET_STATE', {
-            id,
-            name,
-            email,
-            avatar,
-            role,
-            authorized: true,
-          })
-        }
+    RETRIEVE_AUTHENTICATION({ commit }) {
+      const account = jwt.retrieveAccount()
+      if (account) {
         commit('SET_STATE', {
+          id: account._id,
+          name: account.name,
+          display_name: account.display_name,
+          email: account.email,
+          phone: account.phone,
+          avatar: account.avatar,
+          role: account.roles,
+          authorized: true,
           loading: false,
         })
+        router.push('/')
+      } else {
+        router.push('/auth/login')
+      }
+    },
+
+    LOAD_CURRENT_ACCOUNT({ commit, rootState }) {
+      commit('SET_STATE', { loading: true })
+      const currentAccount = mapAuthProviders[rootState.settings.authProvider].currentAccount
+      currentAccount().then(account => {
+        if (account) {
+          commit('SET_STATE', {
+            id: account._id,
+            name: account.name,
+            display_name: account.display_name,
+            email: account.email,
+            phone: account.phone,
+            avatar: account.avatar,
+            role: account.roles,
+            authorized: true,
+            loading: false,
+          })
+          router.push('/')
+        }
+        commit('SET_STATE', { loading: false })
       })
     },
+
     LOGOUT({ commit, rootState }) {
       const logout = mapAuthProviders[rootState.settings.authProvider].logout
       logout().then(() => {
         commit('SET_STATE', {
           id: '',
           name: '',
-          role: '',
+          display_name: '',
           email: '',
+          phone: '',
           avatar: '',
+          role: [],
           authorized: false,
           loading: false,
         })
@@ -124,7 +143,5 @@ export default {
       })
     },
   },
-  getters: {
-    user: state => state,
-  },
+
 }

@@ -21,8 +21,10 @@ export default {
       return this.$route.path
     },
   },
+  created() {
+    this.$store.dispatch('user/RETRIEVE_AUTHENTICATION')
+  },
   mounted() {
-    this.$store.dispatch('user/LOAD_CURRENT_ACCOUNT')
     this.$store.commit('SET_PRIMARY_COLOR', { color: this.settings.primaryColor })
     this.$store.commit('SET_THEME', { theme: this.settings.theme })
   },
@@ -35,7 +37,7 @@ export default {
         this.$router.replace(this.nextRoute)
       }
     },
-    '$route'(to, from) {
+    $route(to, from) {
       const query = Object.assign({}, to.query)
       this.$store.commit('SETUP_URL_SETTINGS', query)
     },

@@ -4,11 +4,14 @@ export default {
   api: {
     base: BASE_URL,
     auth: {
-      login: `${BASE_URL}/auth/login`,
-      logout: `${BASE_URL}/auth/logout`,
-      register: `${BASE_URL}/auth/register`,
-      reset: `${BASE_URL}/auth/reset`,
-      account: `${BASE_URL}/auth/account`,
+      login: '/auth/login',
+      logout: '/auth/logout',
+      register: '/auth/register',
+      reset: '/auth/reset',
+      account: '/auth/account',
+    },
+    content: {
+      editorspicks: '/auth/editorspicks',
     },
   },
 }
