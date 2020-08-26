@@ -1,11 +1,14 @@
 import axios from 'axios'
 import store from 'store'
 import { notification } from 'ant-design-vue'
+import config from '@/configs'
+
+console.log(config)
 
 const apiClient = axios.create({
-  baseURL: '/api',
-  // timeout: 1000,
-  // headers: { 'X-Custom-Header': 'foobar' }
+  baseURL: config.api.base,
+  timeout: 2000,
+  headers: { 'X-Client-Type': 'tpm-dashboard' },
 })
 
 apiClient.interceptors.request.use(request => {
@@ -23,7 +26,7 @@ apiClient.interceptors.response.use(undefined, error => {
   const { data } = response
   if (data) {
     notification.warning({
-      message: data,
+      message: data.error || data.message || 'Someting is wrong, try it later...',
     })
   }
 })

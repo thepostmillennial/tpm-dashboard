@@ -123,7 +123,7 @@
               <a-form-item>
                 <a-checkbox
                   default-checked
-                >I CONSENT TO HAVING MDTK SOFT COLLECT MY PERSONAL DETAILS.</a-checkbox>
+                >I CONSENT TO HAVING TPM COLLECT MY PERSONAL DETAILS.</a-checkbox>
               </a-form-item>
               <a-form-item>
                 <button type="button" class="btn btn-light px-5">Sign in</button>

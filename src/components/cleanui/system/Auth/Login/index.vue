@@ -5,8 +5,7 @@
         <strong>Welcome to {{ settings.logo }}</strong>
       </h1>
       <p>
-        Pluggable enterprise-level application framework.
-        <br />An excellent front-end solution for web applications built upon Ant Design.
+        The Administration Dashboard for The Post Millennial
         <br />Credentials for testing purposes -
         <strong>demo@thepm.news</strong> /
         <strong>demo123</strong>
@@ -16,7 +15,7 @@
       <div class="text-dark font-size-24 mb-3">
         <strong>Sign in to your account</strong>
       </div>
-      <div class="mb-4">
+      <!-- <div class="mb-4">
         <a-radio-group
           :value="settings.authProvider"
           @change="e => changeAuthProvider(e.target.value)"
@@ -36,7 +35,7 @@
             <a-radio value="strapi" disabled>Strapi</a-radio>
           </a-tooltip>
         </a-radio-group>
-      </div>
+      </div> -->
       <a-form class="mb-4" :form="form" @submit="handleSubmit">
         <a-form-item>
           <a-input

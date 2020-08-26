@@ -12,7 +12,7 @@
       </a>
       <br />
       <p class="mb-0">
-        Copyright © 2017-2020 Mdtk Soft |
+        Copyright © 2017-2020 TPM Tech |
         <a
           href="https://www.mediatec.org/privacy"
           target="_blank"
