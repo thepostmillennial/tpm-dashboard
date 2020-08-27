@@ -14,8 +14,8 @@
           <strong class="mr-1">{{ $t('topBar.profileMenu.billingPlan') }}:</strong> Professional
         </div>
         <div>
-          <strong class="mr-1">{{ $t('topBar.profileMenu.role') }}:</strong>
-          {{ user.role || '—' }}
+          <strong class="mr-1">{{ $t('topBar.profileMenu.roles') }}:</strong>
+          {{ user.roles || '—' }}
         </div>
       </a-menu-item>
       <a-menu-divider />
@@ -25,7 +25,7 @@
           {{ user.email || '—' }}
         </div>
         <div>
-          <strong class="mr-1">{{ $t('topBar.profileMenu.phone') }}:</strong> —
+          <strong class="mr-1">{{ $t('topBar.profileMenu.phone') }}:</strong> {{ user.phone || '—' }}
         </div>
       </a-menu-item>
       <a-menu-divider />
@@ -73,5 +73,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

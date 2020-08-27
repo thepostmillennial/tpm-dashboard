@@ -1,15 +1,13 @@
 <template>
   <div class="d-flex flex-nowrap align-items-start pt-4">
     <div class="mr-4 flex-shrink-0 align-self-start kit__utils__avatar kit__utils__avatar--size64">
-      <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
+      <img src="/resources/images/avatars/3.jpg" alt="Mary Stanform" />
     </div>
     <div class="flex-grow-1">
       <div class="border-bottom">
         <div class="d-flex flex-wrap mb-2">
           <div class="mr-auto">
-            <div class="text-gray-6">
-              <span class="text-dark font-weight-bold">Helen maggie</span> posted
-            </div>
+            <div class="text-gray-6"><span class="text-dark font-weight-bold">Helen maggie</span> posted</div>
             <div>Few seconds ago</div>
           </div>
           <div class="nav-item dropdown">
@@ -38,27 +36,19 @@
           <br />incididunt ut labore et dolore magna elit
         </div>
         <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
-          <a class="text-blue mr-3" href="javascript: void(0);">
-            <i class="fe fe-heart mr-1" /> 61 Likes
-          </a>
-          <a class="text-blue mr-3" href="javascript: void(0);">
-            <i class="fe fe-message-square mr-1" /> 2 Comments
-          </a>
+          <a class="text-blue mr-3" href="javascript: void(0);"> <i class="fe fe-heart mr-1" /> 61 Likes </a>
+          <a class="text-blue mr-3" href="javascript: void(0);"> <i class="fe fe-message-square mr-1" /> 2 Comments </a>
         </div>
       </div>
       <div class="d-flex flex-nowrap align-items-start pt-4">
-        <div
-          class="mr-4 flex-shrink-0 align-self-start kit__utils__avatar kit__utils__avatar--size64"
-        >
-          <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
+        <div class="mr-4 flex-shrink-0 align-self-start kit__utils__avatar kit__utils__avatar--size64">
+          <img src="/resources/images/avatars/3.jpg" alt="Mary Stanform" />
         </div>
         <div class="flex-grow-1">
           <div class="border-bottom">
             <div class="d-flex flex-wrap mb-2">
               <div class="mr-auto">
-                <div class="text-gray-6">
-                  <span class="text-dark font-weight-bold">Helen maggie</span> posted
-                </div>
+                <div class="text-gray-6"><span class="text-dark font-weight-bold">Helen maggie</span> posted</div>
                 <div>Few seconds ago</div>
               </div>
               <div class="nav-item dropdown">
@@ -87,9 +77,7 @@
               <br />incididunt ut labore et dolore magna elit
             </div>
             <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
-              <a class="text-blue mr-3" href="javascript: void(0);">
-                <i class="fe fe-heart mr-1" /> 61 Likes
-              </a>
+              <a class="text-blue mr-3" href="javascript: void(0);"> <i class="fe fe-heart mr-1" /> 61 Likes </a>
               <a class="text-blue mr-3" href="javascript: void(0);">
                 <i class="fe fe-message-square mr-1" /> 2 Comments
               </a>
@@ -98,18 +86,14 @@
         </div>
       </div>
       <div class="d-flex flex-nowrap align-items-start pt-4">
-        <div
-          class="mr-4 flex-shrink-0 align-self-start kit__utils__avatar kit__utils__avatar--size64"
-        >
-          <img src="resources/images/avatars/3.jpg" alt="Mary Stanform" />
+        <div class="mr-4 flex-shrink-0 align-self-start kit__utils__avatar kit__utils__avatar--size64">
+          <img src="/resources/images/avatars/3.jpg" alt="Mary Stanform" />
         </div>
         <div class="flex-grow-1">
           <div class="border-bottom">
             <div class="d-flex flex-wrap mb-2">
               <div class="mr-auto">
-                <div class="text-gray-6">
-                  <span class="text-dark font-weight-bold">Helen maggie</span> posted
-                </div>
+                <div class="text-gray-6"><span class="text-dark font-weight-bold">Helen maggie</span> posted</div>
                 <div>Few seconds ago</div>
               </div>
               <div class="nav-item dropdown">
@@ -138,9 +122,7 @@
               <br />incididunt ut labore et dolore magna elit
             </div>
             <div class="d-flex flex-wrap justify-content-start align-items-start mb-3">
-              <a class="text-blue mr-3" href="javascript: void(0);">
-                <i class="fe fe-heart mr-1" /> 61 Likes
-              </a>
+              <a class="text-blue mr-3" href="javascript: void(0);"> <i class="fe fe-heart mr-1" /> 61 Likes </a>
               <a class="text-blue mr-3" href="javascript: void(0);">
                 <i class="fe fe-message-square mr-1" /> 2 Comments
               </a>

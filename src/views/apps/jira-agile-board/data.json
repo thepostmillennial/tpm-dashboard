@@ -5,7 +5,7 @@
       "color": "primary",
       "title": "Backend Issue",
       "deadline": "7:00",
-      "participant": "resources/images/avatars/2.jpg",
+      "participant": "/resources/images/avatars/2.jpg",
       "note": "AWS-200",
       "income": true
     },
@@ -14,7 +14,7 @@
       "color": "success",
       "title": "Prepare Activity List",
       "deadline": "9:45",
-      "participant": "resources/images/avatars/1.jpg",
+      "participant": "/resources/images/avatars/1.jpg",
       "note": "AWS-200",
       "income": false
     }
@@ -25,7 +25,7 @@
       "color": "danger",
       "title": "Schedule error",
       "deadline": "4:02",
-      "participant": "resources/images/avatars/3.jpg",
+      "participant": "/resources/images/avatars/3.jpg",
       "note": "AWS-200",
       "income": false
     },
@@ -34,7 +34,7 @@
       "color": "success",
       "title": "Prepare Activity List",
       "deadline": "9:45",
-      "participant": "resources/images/avatars/5.jpg",
+      "participant": "/resources/images/avatars/5.jpg",
       "note": "AWS-200",
       "income": true
     }
@@ -45,7 +45,7 @@
       "color": "primary",
       "title": "Project fixes",
       "deadline": "1:10",
-      "participant": "resources/images/avatars/3.jpg",
+      "participant": "/resources/images/avatars/3.jpg",
       "note": "AWS-200",
       "income": true
     }

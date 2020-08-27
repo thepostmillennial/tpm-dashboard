@@ -228,7 +228,7 @@
         <kit-general-16
           isNew
           isFavourite
-          image="resources/images/products/003.jpg"
+          image="/resources/images/products/003.jpg"
           name="TP-Link AC1750 Smart WiFi Router - Dual Band Gigabit Wireless Internet Routers for Home"
           price="245.21"
           oldPrice="419.58"

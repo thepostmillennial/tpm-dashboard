@@ -12,17 +12,19 @@
           [$style.white]: settings.authPagesColor === 'white',
           [$style.gray]: settings.authPagesColor === 'gray',
         }"
-        :style="{backgroundImage: settings.authPagesColor === 'image' ? `url(resources/images/content/photos/7.jpg)` : 'none'}"
+        :style="{
+          backgroundImage: settings.authPagesColor === 'image' ? `url(/resources/images/content/photos/7.jpg)` : 'none',
+        }"
       >
         <div
           :class="{
-          [$style.topbar]: true,
-          [$style.topbarGray]: settings.isGrayTopbar,
-        }"
+            [$style.topbar]: true,
+            [$style.topbarGray]: settings.isGrayTopbar,
+          }"
         >
           <div :class="$style.logoContainer">
             <div :class="$style.logo">
-              <img src="resources/images/logo.svg" class="mr-2" alt="Clean UI" />
+              <img src="/resources/images/logo.svg" class="mr-2" alt="Clean UI" />
               <div :class="$style.name">{{ settings.logo }}</div>
               <div v-if="settings.logo === 'TPM Dashboaard'" :class="$style.descr">Vue</div>
             </div>
@@ -38,10 +40,7 @@
           </transition>
         </div>
         <div class="mt-auto pb-5 pt-5">
-          <ul
-            class="list-unstyled d-flex mb-0 flex-wrap justify-content-center"
-            :class="[$style.footerNav]"
-          >
+          <ul class="list-unstyled d-flex mb-0 flex-wrap justify-content-center" :class="[$style.footerNav]">
             <li class="list-inline-item">
               <a href="javascript: void(0);">Terms of Use</a>
             </li>
@@ -60,11 +59,7 @@
           </ul>
           <div class="text-center">
             Copyright © 2017-2020 TPM Tech |
-            <a
-              href="https://www.mediatec.org/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Privacy Policy</a>
+            <a href="https://www.mediatec.org/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
           </div>
         </div>
       </div>
@@ -85,5 +80,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

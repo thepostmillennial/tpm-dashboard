@@ -9,7 +9,7 @@
               <div>Hi! Anyone here? I want to know how I can buy Cui UI?</div>
             </div>
             <div :class="[$style.messageAvatar]" class="kit__utils__avatar">
-              <img src="resources/images/avatars/avatar-2.png" alt="You" />
+              <img src="/resources/images/avatars/avatar-2.png" alt="You" />
             </div>
           </div>
           <div :class="[$style.message, $style.answer]">
@@ -18,7 +18,7 @@
               <div>Please call us + 100 295 000</div>
             </div>
             <div :class="[$style.messageAvatar]" class="kit__utils__avatar">
-              <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
+              <img src="/resources/images/avatars/2.jpg" alt="Mary Stanform" />
             </div>
           </div>
         </div>
@@ -51,5 +51,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

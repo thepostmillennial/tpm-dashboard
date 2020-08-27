@@ -6,7 +6,7 @@
       </div>
       <div class="text-center">
         <div class="kit__utils__avatar kit__utils__avatar--size64 d-inline-block mb-2">
-          <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
+          <img src="/resources/images/avatars/2.jpg" alt="Mary Stanform" />
         </div>
         <div class="font-size-18 text-dark mb-4">
           <strong>Mary Stanform</strong>
@@ -17,7 +17,7 @@
           <a-input
             size="large"
             placeholder="Password"
-            v-decorator="['password', {rules: [{ required: true, message: 'Please input your Password!' }]}]"
+            v-decorator="['password', { rules: [{ required: true, message: 'Please input your Password!' }] }]"
           />
         </a-form-item>
         <a-button type="primary" size="large" class="text-center w-100">
@@ -42,5 +42,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "@/components/cleanui/system/Auth/style.module.scss";
+@import '@/components/cleanui/system/Auth/style.module.scss';
 </style>

@@ -4,7 +4,7 @@
     <ul class="list-unstyled">
       <li :class="$style.item">
         <div :class="$style.itemPic">
-          <img src="resources/images/avatars/1.jpg" alt="Jamie Rockstar"/>
+          <img src="/resources/images/avatars/1.jpg" alt="Jamie Rockstar" />
         </div>
         <div>
           <div>Jamie Rockstar</div>
@@ -13,7 +13,7 @@
       </li>
       <li :class="$style.item">
         <div :class="$style.itemPic">
-          <img src="resources/images/avatars/2.jpg" alt="Katie Banks"/>
+          <img src="/resources/images/avatars/2.jpg" alt="Katie Banks" />
         </div>
         <div>
           <div>Katie Banks</div>
@@ -22,7 +22,7 @@
       </li>
       <li :class="$style.item">
         <div :class="$style.itemPic">
-          <img src="resources/images/avatars/3.jpg" alt="Jessey Kim"/>
+          <img src="/resources/images/avatars/3.jpg" alt="Jessey Kim" />
         </div>
         <div>
           <div>Jessey Kim</div>
@@ -31,7 +31,7 @@
       </li>
       <li :class="$style.item">
         <div :class="$style.itemPic">
-          <img src="resources/images/avatars/4.jpg" alt="Sam Piterson"/>
+          <img src="/resources/images/avatars/4.jpg" alt="Sam Piterson" />
         </div>
         <div>
           <div>Sam Piterson</div>
@@ -40,7 +40,7 @@
       </li>
       <li :class="$style.item">
         <div :class="$style.itemPic">
-          <img src="resources/images/avatars/5.jpg" alt="Mary Stanform"/>
+          <img src="/resources/images/avatars/5.jpg" alt="Mary Stanform" />
         </div>
         <div>
           <div>Mary Stanform</div>
@@ -56,5 +56,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-  @import './style.module.scss';
+@import './style.module.scss';
 </style>

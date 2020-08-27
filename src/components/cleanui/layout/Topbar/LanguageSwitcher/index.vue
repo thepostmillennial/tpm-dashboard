@@ -10,15 +10,7 @@
       </a-menu-item>
       <a-menu-item key="fr-FR">
         <span class="text-uppercase font-size-12 mr-2">FR</span>
-        French
-      </a-menu-item>
-      <a-menu-item key="ru-RU">
-        <span class="text-uppercase font-size-12 mr-2">RU</span>
-        Русский
-      </a-menu-item>
-      <a-menu-item key="zh-CN">
-        <span class="text-uppercase font-size-12 mr-2">CN</span>
-        简体中文
+        Français
       </a-menu-item>
     </a-menu>
   </a-dropdown>
@@ -44,5 +36,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

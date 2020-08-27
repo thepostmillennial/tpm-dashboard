@@ -38,7 +38,7 @@ export async function register(email, password, name) {
           .ref('users')
           .child(uid)
           .set({
-            role: 'admin',
+            roles: 'admin',
             name,
           })
       }
@@ -75,7 +75,7 @@ export async function currentAccount() {
             const mergedUser = Object.assign(user, {
               id: user.uid,
               name: userFields.name,
-              role: userFields.role,
+              roles: userFields.role,
               avatar: user.photoUrl,
             })
             return mergedUser

@@ -6,42 +6,45 @@
           <strong>Simple Email</strong>
         </h5>
         <div class="mb-5">
-          <div
-            style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px;"
-          >
+          <div style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px">
             <div style="max-width: 700px; margin: 0px auto; font-size: 14px">
               <table style="border-collapse: collapse; border: 0; width: 100%; margin-bottom: 20px">
                 <tr>
-                  <td style="vertical-align: top;">
-                    <img
-                      src="resources/images/tf-logo.png"
-                      alt="Clean UI KIT Pro"
-                      style="height: 40px"
-                    />
+                  <td style="vertical-align: top">
+                    <img src="/resources/images/tf-logo.png" alt="Clean UI KIT Pro" style="height: 40px" />
                   </td>
-                  <td style="text-align: right; vertical-align: middle;">
-                    <span style="color: #a09bb9;">Some Description</span>
+                  <td style="text-align: right; vertical-align: middle">
+                    <span style="color: #a09bb9">Some Description</span>
                   </td>
                 </tr>
               </table>
 
-              <div style="padding: 40px 40px 20px 40px; background: #fff;">
-                <table style="border-collapse: collapse; border: 0; width: 100%;">
+              <div style="padding: 40px 40px 20px 40px; background: #fff">
+                <table style="border-collapse: collapse; border: 0; width: 100%">
                   <tbody>
                     <tr>
                       <td>
                         <p>Hi there,</p>
                         <p>
-                          Sometimes you just want to send a simple HTML email with a simple design and
-                          clear call to action.
+                          Sometimes you just want to send a simple HTML email with a simple design and clear call to
+                          action.
                         </p>
                         <a
                           href="javascript: void(0);"
-                          style="display: inline-block; padding: 11px 30px 6px; margin: 20px 0px 30px; font-size: 15px; color: #fff; background: #01a8fe; border-radius: 5px"
-                        >Call To Action</a>
+                          style="
+                            display: inline-block;
+                            padding: 11px 30px 6px;
+                            margin: 20px 0px 30px;
+                            font-size: 15px;
+                            color: #fff;
+                            background: #01a8fe;
+                            border-radius: 5px;
+                          "
+                          >Call To Action</a
+                        >
                         <p>
-                          This is a really simple email template. It's sole purpose is to get the
-                          recipient to click the button with no distractions.
+                          This is a really simple email template. It's sole purpose is to get the recipient to click the
+                          button with no distractions.
                         </p>
                         <p>Good luck! Hope it works.</p>
                       </td>
@@ -53,10 +56,7 @@
                 <p>
                   Mediatec Software Inc., Abbey Road, San Francisco CA 94102
                   <br />Don't like these emails?
-                  <a
-                    href="javascript: void(0);"
-                    style="color: #a09bb9; text-decoration: underline;"
-                  >Unsubscribe</a>
+                  <a href="javascript: void(0);" style="color: #a09bb9; text-decoration: underline">Unsubscribe</a>
                   <br />Powered by Clean UI KIT Pro
                 </p>
               </div>
@@ -69,42 +69,43 @@
           <strong>Email w/ Header</strong>
         </h5>
         <div class="mb-5">
-          <div
-            style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px;"
-          >
+          <div style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px">
             <div style="max-width: 700px; margin: 0px auto; font-size: 14px">
               <table style="border-collapse: collapse; border: 0; width: 100%; margin-bottom: 20px">
                 <tr>
-                  <td style="vertical-align: top;">
-                    <img
-                      src="resources/images/tf-logo.png"
-                      alt="Clean UI KIT Pro"
-                      style="height: 40px"
-                    />
+                  <td style="vertical-align: top">
+                    <img src="/resources/images/tf-logo.png" alt="Clean UI KIT Pro" style="height: 40px" />
                   </td>
-                  <td style="text-align: right; vertical-align: middle;">
-                    <span style="color: #a09bb9;">Some Description</span>
+                  <td style="text-align: right; vertical-align: middle">
+                    <span style="color: #a09bb9">Some Description</span>
                   </td>
                 </tr>
               </table>
 
-              <div style="padding: 40px 40px 20px 40px; background: #fff;">
-                <table style="border-collapse: collapse; border: 0; width: 100%;">
+              <div style="padding: 40px 40px 20px 40px; background: #fff">
+                <table style="border-collapse: collapse; border: 0; width: 100%">
                   <tbody>
                     <tr>
                       <td>
-                        <h5
-                          style="margin-bottom: 20px; color: #24222f; font-weight: 600"
-                        >Password Reset</h5>
+                        <h5 style="margin-bottom: 20px; color: #24222f; font-weight: 600">Password Reset</h5>
                         <p>
-                          Seems like you forgot your password for Clean UI KIT Pro. If this is true, click below
-                          to reset your password.
+                          Seems like you forgot your password for Clean UI KIT Pro. If this is true, click below to
+                          reset your password.
                         </p>
                         <div style="text-align: center">
                           <a
                             href="javascript: void(0);"
-                            style="display: inline-block; padding: 11px 30px 6px; margin: 20px 0px 30px; font-size: 15px; color: #fff; background: #01a8fe; border-radius: 5px"
-                          >Reset Password</a>
+                            style="
+                              display: inline-block;
+                              padding: 11px 30px 6px;
+                              margin: 20px 0px 30px;
+                              font-size: 15px;
+                              color: #fff;
+                              background: #01a8fe;
+                              border-radius: 5px;
+                            "
+                            >Reset Password</a
+                          >
                         </div>
                         <p>If you did not forgot your password you can safely ignore his email.</p>
                         <p>
@@ -120,10 +121,7 @@
                 <p>
                   Mediatec Software Inc., Abbey Road, San Francisco CA 94102
                   <br />Don't like these emails?
-                  <a
-                    href="javascript: void(0);"
-                    style="color: #a09bb9; text-decoration: underline;"
-                  >Unsubscribe</a>
+                  <a href="javascript: void(0);" style="color: #a09bb9; text-decoration: underline">Unsubscribe</a>
                   <br />Powered by Clean UI KIT Pro
                 </p>
               </div>
@@ -136,118 +134,172 @@
           <strong>Ecommerce Email</strong>
         </h5>
         <div class="mb-5">
-          <div
-            style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px;"
-          >
+          <div style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px">
             <div style="max-width: 700px; margin: 0px auto; font-size: 14px">
               <table style="border-collapse: collapse; border: 0; width: 100%; margin-bottom: 20px">
                 <tr>
-                  <td style="vertical-align: top;">
-                    <img
-                      src="resources/images/tf-logo.png"
-                      alt="Clean UI KIT Pro"
-                      style="height: 40px"
-                    />
+                  <td style="vertical-align: top">
+                    <img src="/resources/images/tf-logo.png" alt="Clean UI KIT Pro" style="height: 40px" />
                   </td>
-                  <td style="text-align: right; vertical-align: middle;">
-                    <span style="color: #a09bb9;">Some Description</span>
+                  <td style="text-align: right; vertical-align: middle">
+                    <span style="color: #a09bb9">Some Description</span>
                   </td>
                 </tr>
               </table>
 
-              <div style="padding: 40px 40px 20px 40px; background: #fff;">
-                <table style="border-collapse: collapse; border: 0; width: 100%;">
+              <div style="padding: 40px 40px 20px 40px; background: #fff">
+                <table style="border-collapse: collapse; border: 0; width: 100%">
                   <tbody>
                     <tr>
                       <td>
-                        <h2
-                          style="margin-bottom: 20px; color: #24222f; font-weight: 600"
-                        >Thanks for Purchase!</h2>
+                        <h2 style="margin-bottom: 20px; color: #24222f; font-weight: 600">Thanks for Purchase!</h2>
                         <p>
                           <span style="color: #a09bb9">Monday, Dec 28 2015 at 4:13 PM</span>
                         </p>
                         <br />
-                        <h5
-                          style="margin-bottom: 20px; color: #24222f; font-weight: 600"
-                        >Your Order #00002345</h5>
-                        <table style="border-collapse: collapse; border: 0; width: 100%;">
+                        <h5 style="margin-bottom: 20px; color: #24222f; font-weight: 600">Your Order #00002345</h5>
+                        <table style="border-collapse: collapse; border: 0; width: 100%">
                           <tr>
+                            <td style="text-align: left; padding: 10px 10px 10px 0px; border-top: 3px solid #514d6a">
+                              Apple iPhone 6S
+                            </td>
                             <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 3px solid #514d6a;"
-                            >Apple iPhone 6S</td>
-                            <td
-                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 3px solid #514d6a;"
-                            >1</td>
-                            <td
-                              style="width: 20%; text-align: right; padding: 10px 0px 10px 10px; white-space: nowrap; border-top: 3px solid #514d6a;"
-                            >$ 699.00</td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0;"
-                            >Data cable</td>
-                            <td
-                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 1px solid #d9d7e0;"
-                            >1</td>
-                            <td
-                              style="width: 20%; text-align: right; padding: 10px 0px 10px 10px; white-space: nowrap; border-top: 1px solid #d9d7e0;"
-                            >$ 9.98</td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0;"
-                            >Nueng Silver Case</td>
-                            <td
-                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 1px solid #d9d7e0;"
-                            >2</td>
-                            <td
-                              style="width: 20%; text-align: right; padding: 10px 0px 10px 10px; white-space: nowrap; border-top: 1px solid #d9d7e0;"
-                            >$ 17.49</td>
-                          </tr>
-                          <tr style="color: #a09bb9;">
-                            <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0;"
-                            >Subtotal</td>
-                            <td
-                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 1px solid #d9d7e0;"
-                            >4</td>
-                            <td
-                              style="width: 20%; text-align: right; padding: 10px 0px 10px 10px; white-space: nowrap; border-top: 1px solid #d9d7e0;"
-                            >$ 735.96</td>
-                          </tr>
-                          <tr style="color: #a09bb9;">
-                            <td
-                              style="text-align: left; padding: 0px 10px 10px 0px; border-top: 0px solid #d9d7e0;"
-                            >Tax</td>
-                            <td
-                              style="width: 10%; text-align: center; padding: 0px 10px; border-top: 0px solid #d9d7e0;"
-                            >10%</td>
-                            <td
-                              style="width: 20%; text-align: right; padding: 0px 0px 10px 10px; white-space: nowrap; border-top: 0px solid #d9d7e0;"
-                            >$ 73.60</td>
-                          </tr>
-                          <tr style="color: #a09bb9;">
-                            <td
-                              style="text-align: left; padding: 0px 10px 10px 0px; border-top: 0px solid #d9d7e0;"
-                            >Shipping</td>
-                            <td
-                              style="width: 10%; text-align: center; padding: 0px 10px; border-top: 0px solid #d9d7e0;"
-                            >&nbsp;</td>
-                            <td
-                              style="width: 20%; text-align: right; padding: 0px 0px 10px 10px; white-space: nowrap; border-top: 0px solid #d9d7e0;"
-                            >$ 9.99</td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 3px solid #514d6a;"
+                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 3px solid #514d6a"
                             >
+                              1
+                            </td>
+                            <td
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 10px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 3px solid #514d6a;
+                              "
+                            >
+                              $ 699.00
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0">
+                              Data cable
+                            </td>
+                            <td
+                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 1px solid #d9d7e0"
+                            >
+                              1
+                            </td>
+                            <td
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 10px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 1px solid #d9d7e0;
+                              "
+                            >
+                              $ 9.98
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0">
+                              Nueng Silver Case
+                            </td>
+                            <td
+                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 1px solid #d9d7e0"
+                            >
+                              2
+                            </td>
+                            <td
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 10px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 1px solid #d9d7e0;
+                              "
+                            >
+                              $ 17.49
+                            </td>
+                          </tr>
+                          <tr style="color: #a09bb9">
+                            <td style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0">
+                              Subtotal
+                            </td>
+                            <td
+                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 1px solid #d9d7e0"
+                            >
+                              4
+                            </td>
+                            <td
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 10px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 1px solid #d9d7e0;
+                              "
+                            >
+                              $ 735.96
+                            </td>
+                          </tr>
+                          <tr style="color: #a09bb9">
+                            <td style="text-align: left; padding: 0px 10px 10px 0px; border-top: 0px solid #d9d7e0">
+                              Tax
+                            </td>
+                            <td
+                              style="width: 10%; text-align: center; padding: 0px 10px; border-top: 0px solid #d9d7e0"
+                            >
+                              10%
+                            </td>
+                            <td
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 0px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 0px solid #d9d7e0;
+                              "
+                            >
+                              $ 73.60
+                            </td>
+                          </tr>
+                          <tr style="color: #a09bb9">
+                            <td style="text-align: left; padding: 0px 10px 10px 0px; border-top: 0px solid #d9d7e0">
+                              Shipping
+                            </td>
+                            <td
+                              style="width: 10%; text-align: center; padding: 0px 10px; border-top: 0px solid #d9d7e0"
+                            >
+                              &nbsp;
+                            </td>
+                            <td
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 0px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 0px solid #d9d7e0;
+                              "
+                            >
+                              $ 9.99
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left; padding: 10px 10px 10px 0px; border-top: 3px solid #514d6a">
                               <span style="font-size: 18px; font-weight: bold">Total</span>
                             </td>
                             <td
-                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 3px solid #514d6a;"
+                              style="width: 10%; text-align: center; padding: 10px 10px; border-top: 3px solid #514d6a"
                             ></td>
                             <td
-                              style="width: 20%; text-align: right; padding: 10px 0px 10px 10px; white-space: nowrap; border-top: 3px solid #514d6a;"
+                              style="
+                                width: 20%;
+                                text-align: right;
+                                padding: 10px 0px 10px 10px;
+                                white-space: nowrap;
+                                border-top: 3px solid #514d6a;
+                              "
                             >
                               <span style="font-size: 18px; font-weight: bold">$ 876.96</span>
                             </td>
@@ -256,33 +308,40 @@
 
                         <br />
                         <br />
-                        <h5
-                          style="margin-bottom: 20px; color: #24222f; font-weight: 600"
-                        >Your Details</h5>
-                        <table style="border-collapse: collapse; border: 0; width: 100%;">
+                        <h5 style="margin-bottom: 20px; color: #24222f; font-weight: 600">Your Details</h5>
+                        <table style="border-collapse: collapse; border: 0; width: 100%">
                           <tr>
                             <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0; white-space: nowrap; vertical-align: top"
-                            >Shipping To</td>
-                            <td
-                              style="width: 50%;padding: 10px 0px 10px 10px; border-top: 1px solid #d9d7e0;"
+                              style="
+                                text-align: left;
+                                padding: 10px 10px 10px 0px;
+                                border-top: 1px solid #d9d7e0;
+                                white-space: nowrap;
+                                vertical-align: top;
+                              "
                             >
+                              Shipping To
+                            </td>
+                            <td style="width: 50%; padding: 10px 0px 10px 10px; border-top: 1px solid #d9d7e0">
                               Tony Stark
-                              <br />22 23rd Street
-                              <br />San Francisco
-                              <br />CA 94107
+                              <br />22 23rd Street <br />San Francisco <br />CA 94107
                             </td>
                           </tr>
                           <tr>
                             <td
-                              style="text-align: left; padding: 10px 10px 10px 0px; border-top: 1px solid #d9d7e0; white-space: nowrap; vertical-align: top"
-                            >Billed To</td>
-                            <td
-                              style="width: 50%;padding: 10px 0px 10px 10px; border-top: 1px solid #d9d7e0;"
+                              style="
+                                text-align: left;
+                                padding: 10px 10px 10px 0px;
+                                border-top: 1px solid #d9d7e0;
+                                white-space: nowrap;
+                                vertical-align: top;
+                              "
                             >
+                              Billed To
+                            </td>
+                            <td style="width: 50%; padding: 10px 0px 10px 10px; border-top: 1px solid #d9d7e0">
                               Visa
-                              <br />Ending in *7643
-                              <br />Expiring 08/2020
+                              <br />Ending in *7643 <br />Expiring 08/2020
                             </td>
                           </tr>
                         </table>
@@ -291,10 +350,9 @@
                         <br />
                         <p style="text-align: center">
                           Notice something wrong?
-                          <a
-                            href="javascript: void(0);"
-                            style="color: #01a8fe; text-decoration: underline;"
-                          >Contact our support team</a>
+                          <a href="javascript: void(0);" style="color: #01a8fe; text-decoration: underline"
+                            >Contact our support team</a
+                          >
                           and we'll e happy to help.
                         </p>
                       </td>
@@ -306,10 +364,7 @@
                 <p>
                   Mediatec Software Inc., Abbey Road, San Francisco CA 94102
                   <br />Don't like these emails?
-                  <a
-                    href="javascript: void(0);"
-                    style="color: #a09bb9; text-decoration: underline;"
-                  >Unsubscribe</a>
+                  <a href="javascript: void(0);" style="color: #a09bb9; text-decoration: underline">Unsubscribe</a>
                   <br />Powered by Clean UI KIT Pro
                 </p>
               </div>
@@ -322,46 +377,73 @@
           <strong>Email w/ Action</strong>
         </h5>
         <div class="mb-5">
-          <div
-            style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px;"
-          >
+          <div style="width: 100%; background: #f2f4f8; padding: 50px 20px; color: #514d6a; border-radius: 5px">
             <div style="max-width: 700px; margin: 0px auto; font-size: 14px">
               <table style="border-collapse: collapse; border: 0; width: 100%; margin-bottom: 20px">
                 <tr>
-                  <td style="vertical-align: top;">
-                    <img
-                      src="resources/images/tf-logo.png"
-                      alt="Clean UI KIT Pro"
-                      style="height: 40px"
-                    />
+                  <td style="vertical-align: top">
+                    <img src="/resources/images/tf-logo.png" alt="Clean UI KIT Pro" style="height: 40px" />
                   </td>
-                  <td style="text-align: right; vertical-align: middle;">
-                    <span style="color: #a09bb9;">Some Description</span>
+                  <td style="text-align: right; vertical-align: middle">
+                    <span style="color: #a09bb9">Some Description</span>
                   </td>
                 </tr>
               </table>
 
-              <div style="padding: 40px 40px 20px 40px; background: #fff;">
-                <table style="border-collapse: collapse; border: 0; width: 100%;">
+              <div style="padding: 40px 40px 20px 40px; background: #fff">
+                <table style="border-collapse: collapse; border: 0; width: 100%">
                   <tbody>
                     <tr>
                       <td>
                         <div
-                          style="padding: 15px 30px; background: #46be8a; border-radius: 5px; margin-bottom: 20px; color: #fff;"
-                        >Success! Something good happened.</div>
+                          style="
+                            padding: 15px 30px;
+                            background: #46be8a;
+                            border-radius: 5px;
+                            margin-bottom: 20px;
+                            color: #fff;
+                          "
+                        >
+                          Success! Something good happened.
+                        </div>
                         <div
-                          style="padding: 15px 30px; background: #fb434a; border-radius: 5px; margin-bottom: 20px; color: #fff;"
-                        >Error! Something bad happened.</div>
+                          style="
+                            padding: 15px 30px;
+                            background: #fb434a;
+                            border-radius: 5px;
+                            margin-bottom: 20px;
+                            color: #fff;
+                          "
+                        >
+                          Error! Something bad happened.
+                        </div>
                         <div
-                          style="padding: 15px 30px; background: #fff; border: 1px solid #acb7bf; border-radius: 5px; margin-bottom: 20px;"
-                        >Information! Something neutral happened.</div>
+                          style="
+                            padding: 15px 30px;
+                            background: #fff;
+                            border: 1px solid #acb7bf;
+                            border-radius: 5px;
+                            margin-bottom: 20px;
+                          "
+                        >
+                          Information! Something neutral happened.
+                        </div>
                         <p>Hi George,</p>
                         <p>Congratulations! Something good has appened.</p>
                         <div style="text-align: center">
                           <a
                             href="javascript: void(0);"
-                            style="display: inline-block; padding: 11px 30px 6px; margin: 20px 0px 30px; font-size: 15px; color: #fff; background: #01a8fe; border-radius: 5px"
-                          >Take Action Now</a>
+                            style="
+                              display: inline-block;
+                              padding: 11px 30px 6px;
+                              margin: 20px 0px 30px;
+                              font-size: 15px;
+                              color: #fff;
+                              background: #01a8fe;
+                              border-radius: 5px;
+                            "
+                            >Take Action Now</a
+                          >
                         </div>
                         <p>Thanks for being great customer. Let it be!</p>
                       </td>
@@ -373,10 +455,7 @@
                 <p>
                   Mediatec Software Inc., Abbey Road, San Francisco CA 94102
                   <br />Don't like these emails?
-                  <a
-                    href="javascript: void(0);"
-                    style="color: #a09bb9; text-decoration: underline;"
-                  >Unsubscribe</a>
+                  <a href="javascript: void(0);" style="color: #a09bb9; text-decoration: underline">Unsubscribe</a>
                   <br />Powered by Clean UI KIT Pro
                 </p>
               </div>

@@ -2,21 +2,16 @@
   <div>
     <div class="d-flex flex-wrap align-items-center">
       <div class="kit__utils__avatar kit__utils__avatar--size64 flex-shrink-0 mr-5 mb-3">
-        <img src="resources/images/avatars/2.jpg" alt="Mary Stanform" />
+        <img src="/resources/images/avatars/2.jpg" alt="Mary Stanform" />
       </div>
       <div class="mr-auto mb-3">
         <div class="text-dark font-weight-bold font-size-24">
           <span class="mr-3">Mediatec Software</span>
-          <span
-            class="align-middle text-primary text-uppercase font-size-12 badge badge-light"
-          >Default</span>
+          <span class="align-middle text-primary text-uppercase font-size-12 badge badge-light">Default</span>
         </div>
         <div>Operational / Developer tooling / Update your project information under Settings</div>
       </div>
-      <a
-        class="btn btn-light btn-lg text-blue font-size-14"
-        href="javascript: void(0);"
-      >Move Resources →</a>
+      <a class="btn btn-light btn-lg text-blue font-size-14" href="javascript: void(0);">Move Resources →</a>
     </div>
     <a-tabs defaultActiveKey="1" class="kit-tabs-bordered mb-2">
       <a-tab-pane tab="Resources" key="1" />
@@ -62,10 +57,7 @@
           <div class="d-flex align-items-center flex-wrap">
             <div class="d-flex flex-nowrap align-items-center width-200 flex-shrink-1 mr-2">
               <div class="kit__utils__donut kit__utils__donut--danger mr-2 flex-shrink-0"></div>
-              <a
-                href="javascript: void(0);"
-                class="font-weight-bold text-blue text-nowrap"
-              >mediatec-main-server</a>
+              <a href="javascript: void(0);" class="font-weight-bold text-blue text-nowrap">mediatec-main-server</a>
             </div>
             <div class="flex-grow-1 mr-2">FRA1 / 1GB / 25GB Disk</div>
             <div class="flex-grow-1 mr-auto">46.101.103.230</div>
@@ -99,10 +91,7 @@
           <div class="d-flex align-items-center flex-wrap">
             <div class="d-flex flex-nowrap align-items-center width-200 flex-shrink-1 mr-2">
               <div class="kit__utils__donut kit__utils__donut--success mr-2 flex-shrink-0"></div>
-              <a
-                href="javascript: void(0);"
-                class="font-weight-bold text-blue text-nowrap"
-              >mediatec-cdn</a>
+              <a href="javascript: void(0);" class="font-weight-bold text-blue text-nowrap">mediatec-cdn</a>
             </div>
             <div class="flex-grow-1 mr-2">FRA1 / 1GB / 25GB Disk</div>
             <div class="flex-grow-1 mr-auto">46.101.103.230</div>
@@ -164,5 +153,4 @@ export default {
     KitList5,
   },
 }
-
 </script>

@@ -21,11 +21,11 @@
                 <img :src="item.avatar" :alt="item.name" />
               </div>
               <div :class="$style.info" class="flex-grow-1">
-                <div class="text-uppercase font-size-12 text-truncate text-gray-6">{{item.position}}</div>
-                <div class="text-dark font-size-18 font-weight-bold text-truncate">{{item.name}}</div>
+                <div class="text-uppercase font-size-12 text-truncate text-gray-6">{{ item.position }}</div>
+                <div class="text-dark font-size-18 font-weight-bold text-truncate">{{ item.name }}</div>
               </div>
               <div v-if="item.unread" :class="$style.unread" class="flex-shrink-0 align-self-start">
-                <div class="badge badge-success">{{item.unread}}</div>
+                <div class="badge badge-success">{{ item.unread }}</div>
               </div>
             </a>
           </vue-custom-scrollbar>
@@ -36,8 +36,8 @@
           <div class="card-header card-header-flex align-items-center">
             <div class="d-flex flex-column justify-content-center mr-auto">
               <h5 class="mb-0 mr-2 font-size-18">
-                {{name}}
-                <span class="font-size-14 text-gray-6">({{position}})</span>
+                {{ name }}
+                <span class="font-size-14 text-gray-6">({{ position }})</span>
               </h5>
             </div>
             <div>
@@ -77,14 +77,12 @@
                     :class="[$style.message, message.owner !== 'you' ? $style.answer : '']"
                   >
                     <div :class="$style.messageContent">
-                      <div
-                        class="text-gray-4 font-size-12 text-uppercase"
-                      >{{message.owner}}, {{message.time}}</div>
-                      <div>{{message.content}}</div>
+                      <div class="text-gray-4 font-size-12 text-uppercase">{{ message.owner }}, {{ message.time }}</div>
+                      <div>{{ message.content }}</div>
                     </div>
                     <div class="kit__utils__avatar" :class="$style.messageAvatar">
                       <img
-                        :src="message.owner !== 'you' ? avatar : 'resources/images/avatars/avatar-2.png'"
+                        :src="message.owner !== 'you' ? avatar : '/resources/images/avatars/avatar-2.png'"
                         :alt="name"
                       />
                     </div>
@@ -92,7 +90,7 @@
                 </div>
               </vue-custom-scrollbar>
             </div>
-            <div class="pt-2 pb-2">{{name}} is typing...</div>
+            <div class="pt-2 pb-2">{{ name }} is typing...</div>
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Send message..." />
               <div class="input-group-append">
@@ -136,5 +134,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -8,7 +8,7 @@ const users = [
     password: 'demo123',
     name: 'TPM Devs',
     avatar: '',
-    role: 'admin',
+    roles: 'admin',
   },
 ]
 
@@ -46,7 +46,7 @@ mock.onPost('/api/auth/register').reply(request => {
       password,
       name,
       avatar: '',
-      role: 'admin',
+      roles: 'admin',
     }
     users.push(user)
 

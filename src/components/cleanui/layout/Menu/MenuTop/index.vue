@@ -9,7 +9,7 @@
   >
     <div :class="$style.logoContainer">
       <div :class="$style.logo">
-        <img src="resources/images/logo.svg" class="mr-2" alt="Clean UI" />
+        <img src="/resources/images/logo.svg" class="mr-2" alt="Clean UI" />
         <div :class="$style.name">{{ settings.logo }}</div>
         <div v-if="settings.logo === 'TPM Dashboaard'" :class="$style.descr">Vue</div>
       </div>
@@ -17,13 +17,8 @@
     <div :class="$style.navigation">
       <a-menu :mode="'horizontal'" :selectedKeys="selectedKeys" @click="handleClick">
         <template v-for="item in menuData">
-          <template v-if="!item.roles || item.roles.includes(user.role)">
-            <item
-              v-if="!item.children && !item.category"
-              :menu-info="item"
-              :styles="$style"
-              :key="item.key"
-            />
+          <template v-if="hasPermission(item.roles)">
+            <item v-if="!item.children && !item.category" :menu-info="item" :styles="$style" :key="item.key" />
             <sub-menu v-if="item.children" :menu-info="item" :styles="$style" :key="item.key" />
           </template>
         </template>
@@ -62,11 +57,14 @@ export default {
     'settings.isMenuCollapsed'() {
       this.openKeys = []
     },
-    '$route'() {
+    $route() {
       this.setSelectedKeys()
     },
   },
   methods: {
+    hasPermission(roles) {
+      return roles ? roles.some((r) => this.user.roles.includes(r)) : true
+    },
     handleClick(e) {
       if (e.key === 'settings') {
         this.$store.commit('CHANGE_SETTING', { setting: 'isSettingsOpen', value: true })
@@ -86,10 +84,7 @@ export default {
           }
           return flattenedItems
         }, [])
-      const selectedItem = find(flattenItems(menuData, 'children'), [
-        'url',
-        pathname,
-      ])
+      const selectedItem = find(flattenItems(menuData, 'children'), ['url', pathname])
       this.selectedKeys = selectedItem ? [selectedItem.key] : []
     },
   },
@@ -97,5 +92,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

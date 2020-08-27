@@ -41,7 +41,7 @@
       <li :class="$style.item">
         <a href="javascript: void(0);" :class="$style.itemLink">
           <div class="mr-3" :class="$style.avatar">
-            <img src="resources/images/avatars/5.jpg" alt="Mary Stanform" />
+            <img src="/resources/images/avatars/5.jpg" alt="Mary Stanform" />
           </div>
           <div>
             <div class="text-blue">Mary Stanform</div>
@@ -52,7 +52,7 @@
       <li :class="$style.item">
         <a href="javascript: void(0);" :class="$style.itemLink">
           <div class="mr-3" :class="$style.avatar">
-            <img src="resources/images/avatars/1.jpg" alt="Jamie Rockstar" />
+            <img src="/resources/images/avatars/1.jpg" alt="Jamie Rockstar" />
           </div>
           <div>
             <div class="text-blue">Jamie Rockstar</div>
@@ -63,7 +63,7 @@
       <li :class="$style.item">
         <a href="javascript: void(0);" :class="$style.itemLink">
           <div class="mr-3" :class="$style.avatar">
-            <img src="resources/images/avatars/4.jpg" alt="Mary Stanform" />
+            <img src="/resources/images/avatars/4.jpg" alt="Mary Stanform" />
           </div>
           <div>
             <div class="text-blue">David Bowie</div>
@@ -80,5 +80,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

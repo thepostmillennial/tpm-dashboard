@@ -31,7 +31,7 @@ export default {
     email: '',
     phone: '',
     avatar: '',
-    role: [],
+    roles: [],
     authorized: false, // false is default value
     loading: false,
   },
@@ -93,7 +93,7 @@ export default {
           email: account.email,
           phone: account.phone,
           avatar: account.avatar,
-          role: account.roles,
+          roles: account.roles,
           authorized: true,
           loading: false,
         })
@@ -115,7 +115,7 @@ export default {
             email: account.email,
             phone: account.phone,
             avatar: account.avatar,
-            role: account.roles,
+            roles: account.roles,
             authorized: true,
             loading: false,
           })
@@ -135,7 +135,7 @@ export default {
           email: '',
           phone: '',
           avatar: '',
-          role: [],
+          roles: [],
           authorized: false,
           loading: false,
         })

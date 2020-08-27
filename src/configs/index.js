@@ -13,5 +13,9 @@ export default {
     content: {
       editorspicks: '/auth/editorspicks',
     },
+    system: {
+      users: '/users',
+      user_by_username: '/users/username',
+    },
   },
 }

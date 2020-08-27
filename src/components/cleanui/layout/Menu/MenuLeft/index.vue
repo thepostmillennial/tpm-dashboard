@@ -22,7 +22,7 @@
     >
       <div :class="$style.logoContainer">
         <div :class="$style.logo">
-          <img src="resources/images/logo.svg" class="mr-2" alt="Clean UI" />
+          <img src="/resources/images/logo.svg" class="mr-2" alt="Clean UI" />
           <div :class="$style.name">{{ settings.logo }}</div>
           <div v-if="settings.logo === 'TPM Dashboaard'" :class="$style.descr">Vue</div>
         </div>
@@ -44,29 +44,15 @@
           :class="$style.navigation"
         >
           <template v-for="(item, index) in menuData">
-            <template v-if="!item.roles || item.roles.includes(user.role)">
+            <template v-if="hasPermission(item.roles)">
               <a-menu-item-group :key="index" v-if="item.category">
                 <template slot="title">{{ item.title }}</template>
               </a-menu-item-group>
-              <item
-                v-if="!item.children && !item.category"
-                :menu-info="item"
-                :styles="$style"
-                :key="item.key"
-              />
+              <item v-if="!item.children && !item.category" :menu-info="item" :styles="$style" :key="item.key" />
               <sub-menu v-if="item.children" :menu-info="item" :styles="$style" :key="item.key" />
             </template>
           </template>
         </a-menu>
-        <div :class="$style.banner">
-          <p>More components, more style, more themes, and premium support!</p>
-          <a
-            href="https://themeforest.net/item/clean-ui-react-admin-template/21938700"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-sm btn-success btn-rounded px-3"
-          >Buy Bundle</a>
-        </div>
       </vue-custom-scrollbar>
     </div>
   </a-layout-sider>
@@ -84,15 +70,6 @@ import Item from './partials/item'
 export default {
   name: 'menu-left',
   components: { vueCustomScrollbar, SubMenu, Item },
-  computed: {
-    ...mapState(['settings']),
-    ...mapGetters('user', ['user']),
-  },
-  mounted() {
-    this.openKeys = store.get('app.menu.openedKeys') || []
-    this.selectedKeys = store.get('app.menu.selectedKeys') || []
-    this.setSelectedKeys()
-  },
   data() {
     return {
       menuData: getMenuData,
@@ -100,15 +77,10 @@ export default {
       openKeys: [],
     }
   },
-  watch: {
-    'settings.isMenuCollapsed'() {
-      this.openKeys = []
-    },
-    '$route'() {
-      this.setSelectedKeys()
-    },
-  },
   methods: {
+    hasPermission(roles) {
+      return roles ? roles.some((r) => this.user.roles.includes(r)) : true
+    },
     onCollapse: function (collapsed, type) {
       const value = !this.settings.isMenuCollapsed
       this.$store.commit('CHANGE_SETTING', { setting: 'isMenuCollapsed', value })
@@ -136,16 +108,30 @@ export default {
           }
           return flattenedItems
         }, [])
-      const selectedItem = find(flattenItems(menuData, 'children'), [
-        'url',
-        pathname,
-      ])
+      const selectedItem = find(flattenItems(menuData, 'children'), ['url', pathname])
       this.selectedKeys = selectedItem ? [selectedItem.key] : []
     },
+  },
+  watch: {
+    'settings.isMenuCollapsed'() {
+      this.openKeys = []
+    },
+    $route() {
+      this.setSelectedKeys()
+    },
+  },
+  computed: {
+    ...mapState(['settings']),
+    ...mapGetters('user', ['user']),
+  },
+  mounted() {
+    this.openKeys = store.get('app.menu.openedKeys') || []
+    this.selectedKeys = store.get('app.menu.selectedKeys') || []
+    this.setSelectedKeys()
   },
 }
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-wrap flex-column align-items-center">
     <div class="kit__utils__avatar kit__utils__avatar--size64 mb-3">
-      <img src="resources/images/avatars/5.jpg" alt="Mary Stanform" />
+      <img src="/resources/images/avatars/5.jpg" alt="Mary Stanform" />
     </div>
     <div class="text-center">
       <div class="text-dark font-weight-bold font-size-18">Mary Stanform</div>
@@ -21,5 +21,5 @@ export default {
 }
 </script>
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

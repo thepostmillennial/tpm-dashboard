@@ -11,7 +11,7 @@ const messages = {
     profileMenu: {
       hello: 'Hello',
       billingPlan: 'Billing Plan',
-      role: 'Role',
+      roles: 'Roles',
       email: 'Email',
       phone: 'Phone',
       editProfile: 'Edit Profile',

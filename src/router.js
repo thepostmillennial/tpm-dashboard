@@ -8,7 +8,7 @@ Vue.use(Router)
 
 const router = new Router({
   base: process.env.BASE_URL,
-  // mode: 'history',
+  mode: 'history',
   scrollBehavior() {
     return { x: 0, y: 0 }
   },
@@ -22,6 +22,33 @@ const router = new Router({
         hidden: true,
       },
       children: [
+        // Content
+        // editorspicks
+        {
+          path: '/content/editorspicks',
+          meta: {
+            title: 'Editors\' Picks',
+          },
+          component: () => import('./views/content/editorspicks'),
+        },
+        // System
+        // users
+        {
+          name: 'system-users',
+          path: '/system/users',
+          meta: {
+            title: 'Users',
+          },
+          component: () => import('./views/system/users'),
+        },
+        {
+          name: 'system-user',
+          path: '/system/user/:username',
+          meta: {
+            title: 'User Details',
+          },
+          component: () => import('./views/system/user'),
+        },
         // Dashboards
         {
           path: '/dashboard/alpha',

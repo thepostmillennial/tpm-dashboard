@@ -3,12 +3,12 @@
     <a-input
       :class="$style.extInput"
       :placeholder="$t('topBar.typeToSearch')"
-      style="width: 200px;"
+      style="width: 200px"
       @focus="openSearch"
       ref="outerInput"
     >
       <span slot="prefix">
-        <a-icon type="search" style="color: rgba(0,0,0,.25)" />
+        <a-icon type="search" style="color: rgba(0, 0, 0, 0.25)" />
       </span>
     </a-input>
     <div :class="[$style.livesearch, showSearch ? $style.livesearchVisible : '']">
@@ -43,8 +43,10 @@
                 <div :class="$style.resultContent">
                   <div
                     :class="$style.resultThumb"
-                    :style="{backgroundImage: 'url(\'resources/images/content/photos/1.jpeg\')'}"
-                  >#1</div>
+                    :style="{ backgroundImage: 'url(\'/resources/images/content/photos/1.jpeg\')' }"
+                  >
+                    #1
+                  </div>
                   <div :class="$style.result">
                     <div :class="$style.resultText">Samsung Galaxy A50 4GB/64GB</div>
                     <div :class="$style.resultSource">In some partition</div>
@@ -53,8 +55,10 @@
                 <div :class="$style.resultContent">
                   <div
                     :class="$style.resultThumb"
-                    :style="{backgroundImage: 'url(\'resources/images/content/photos/2.jpeg\')'}"
-                  >#2</div>
+                    :style="{ backgroundImage: 'url(\'/resources/images/content/photos/2.jpeg\')' }"
+                  >
+                    #2
+                  </div>
                   <div :class="$style.result">
                     <div :class="$style.resultText">Apple iPhone 11 64GB</div>
                     <div :class="$style.resultSource">In some partition</div>
@@ -63,8 +67,10 @@
                 <div :class="$style.resultContent">
                   <div
                     :class="$style.resultThumb"
-                    :style="{backgroundImage: 'url(\'resources/images/content/photos/3.jpeg\')'}"
-                  >#3</div>
+                    :style="{ backgroundImage: 'url(\'/resources/images/content/photos/3.jpeg\')' }"
+                  >
+                    #3
+                  </div>
                   <div :class="$style.result">
                     <div :class="$style.resultText">Samsung Galaxy A51 SM-A515F/DS 4GB/64GB</div>
                     <div :class="$style.resultSource">In some partition</div>
@@ -73,8 +79,10 @@
                 <div :class="$style.resultContent">
                   <div
                     :class="$style.resultThumb"
-                    :style="{backgroundImage: 'url(\'resources/images/content/photos/4.jpeg\')'}"
-                  >#4</div>
+                    :style="{ backgroundImage: 'url(\'/resources/images/content/photos/4.jpeg\')' }"
+                  >
+                    #4
+                  </div>
                   <div :class="$style.result">
                     <div :class="$style.resultText">Xiaomi Redmi 8 4GB/64GB</div>
                     <div :class="$style.resultSource">In some partition</div>
@@ -135,5 +143,5 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import "./style.module.scss";
+@import './style.module.scss';
 </style>

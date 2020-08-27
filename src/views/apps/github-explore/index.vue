@@ -45,24 +45,14 @@
     </a-tabs>
     <div class="text-dark font-size-18 mb-3">
       Pluggable enterprise-level react application framework.
-      <a
-        class="text-blue"
-        href="javascript: void(0);"
-      >https://umijs.org/</a>
+      <a class="text-blue" href="javascript: void(0);">https://umijs.org/</a>
     </div>
     <div class="mb-4">
-      <a
-        href="javascript: void(0);"
-        class="badge text-blue text-uppercase bg-light font-size-12 mr-2"
-      >Umi</a>
-      <a
-        href="javascript: void(0);"
-        class="badge text-blue text-uppercase bg-light font-size-12 mr-2"
-      >React-framework</a>
-      <a
-        href="javascript: void(0);"
-        class="badge text-blue text-uppercase bg-light font-size-12 mr-2"
-      >Umijs</a>
+      <a href="javascript: void(0);" class="badge text-blue text-uppercase bg-light font-size-12 mr-2">Umi</a>
+      <a href="javascript: void(0);" class="badge text-blue text-uppercase bg-light font-size-12 mr-2"
+        >React-framework</a
+      >
+      <a href="javascript: void(0);" class="badge text-blue text-uppercase bg-light font-size-12 mr-2">Umijs</a>
     </div>
     <div class="d-flex flex-wrap justify-content-around border-top border-bottom">
       <div class="mx-3 my-2 text-nowrap">
@@ -89,10 +79,7 @@
     <div class="d-flex flex-wrap border-bottom mb-3">
       <div class="my-3 mr-3">
         <a-dropdown placement="bottomLeft" :trigger="['click']">
-          <a
-            class="btn btn-light text-blue dropdown-toggle"
-            href="javascript: void(0);"
-          >Branch: Master</a>
+          <a class="btn btn-light text-blue dropdown-toggle" href="javascript: void(0);">Branch: Master</a>
           <a-menu slot="overlay">
             <a-menu-item>
               <a href="javascript:;">Testing</a>
@@ -128,7 +115,7 @@
         class="flex-shrink-0 d-flex align-items-center pr-3 mr-auto text-primary mt-1 mb-1"
       >
         <div class="kit__utils__avatar kit__utils__avatar--size27 mr-3 flex-shrink-0">
-          <img src="resources/images/avatars/1.jpg" alt="sorrycc" />
+          <img src="/resources/images/avatars/1.jpg" alt="sorrycc" />
         </div>
         <div>sorrycc</div>
       </a>
@@ -138,14 +125,14 @@
       <table class="table table-hover text-nowrap">
         <tbody>
           <tr v-for="(item, index) in data" :key="index">
-            <td style="width: 25px;">
+            <td style="width: 25px">
               <i :class="[item.type === 'folder' ? 'fa-folder' : 'fa-file-o', 'fa']" />
             </td>
             <td class="text-nowrap">
-              <a href="javascript: void(0);">{{item.name}}</a>
+              <a href="javascript: void(0);">{{ item.name }}</a>
             </td>
-            <td class="text-nowrap">{{item.info}}</td>
-            <td class="text-nowrap text-right">{{item.time}}</td>
+            <td class="text-nowrap">{{ item.info }}</td>
+            <td class="text-nowrap text-right">{{ item.time }}</td>
           </tr>
         </tbody>
       </table>
