@@ -5,7 +5,7 @@ import config from '@/configs'
 
 const apiClient = axios.create({
   baseURL: config.api.base,
-  timeout: 2000,
+  timeout: 4000,
   headers: { 'X-Client-Type': 'tpm-dashboard' },
 })
 
