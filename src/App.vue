@@ -21,18 +21,17 @@ export default {
       return this.$route.path
     },
   },
-  created() {
-    this.$store.dispatch('user/RETRIEVE_AUTHENTICATION')
-  },
   mounted() {
-    this.$store.commit('SET_PRIMARY_COLOR', { color: this.settings.primaryColor })
+    this.$store.commit('SET_PRIMARY_COLOR', {
+      color: this.settings.primaryColor,
+    })
     this.$store.commit('SET_THEME', { theme: this.settings.theme })
   },
   watch: {
     '$store.state.settings.theme'(theme) {
       this.$store.commit('SET_THEME', { theme })
     },
-    authorized(authorized) {
+    '$store.state.user.authorized'(authorized) {
       if (authorized && this.currentRoute === '/auth/login') {
         this.$router.replace(this.nextRoute)
       }

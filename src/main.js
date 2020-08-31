@@ -8,6 +8,7 @@ import VuePageTitle from 'vue-page-title'
 import NProgress from 'vue-nprogress'
 import VueLayers from 'vuelayers'
 import BootstrapVue from 'bootstrap-vue'
+import moment from 'vue-moment'
 
 import App from './App.vue'
 import router from './router'
@@ -19,9 +20,9 @@ import './registerServiceWorker'
 // mocking api
 import './services/axios/fakeApi'
 
+Vue.use(moment)
 Vue.use(BootstrapVue)
 Vue.use(VueLayers)
-
 Vue.use(NProgress)
 Vue.use(VuePageTitle, {
   prefix: 'TPM Dashboaard | ',

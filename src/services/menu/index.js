@@ -7,7 +7,7 @@ export const getMenuData = [
     title: 'Dashboards',
     key: 'dashboards',
     icon: 'fe fe-home',
-    roles: ['admin', 'editor'],
+    roles: ['superadmin', 'admin', 'editor'],
     count: 0,
     children: [
       {
@@ -69,7 +69,7 @@ export const getMenuData = [
     title: 'System',
     key: 'system',
     icon: 'fe fe-settings',
-    roles: ['admin'],
+    roles: ['superadmin', 'admin', 'editor'],
     children: [
       {
         title: 'Users',

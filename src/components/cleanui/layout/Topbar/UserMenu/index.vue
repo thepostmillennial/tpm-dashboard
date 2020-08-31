@@ -11,7 +11,8 @@
           <strong>{{ $t('topBar.profileMenu.hello') }}, {{ user.name || 'Anonymous' }}</strong>
         </div>
         <div>
-          <strong class="mr-1">{{ $t('topBar.profileMenu.billingPlan') }}:</strong> Professional
+          <strong class="mr-1">{{ $t('topBar.profileMenu.billingPlan') }}:</strong>
+          Professional
         </div>
         <div>
           <strong class="mr-1">{{ $t('topBar.profileMenu.roles') }}:</strong>
@@ -25,7 +26,8 @@
           {{ user.email || '—' }}
         </div>
         <div>
-          <strong class="mr-1">{{ $t('topBar.profileMenu.phone') }}:</strong> {{ user.phone || '—' }}
+          <strong class="mr-1">{{ $t('topBar.profileMenu.phone') }}:</strong>
+          {{ user.phone || '—' }}
         </div>
       </a-menu-item>
       <a-menu-divider />
@@ -47,11 +49,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   computed: {
-    ...mapState(['user']),
+    user() {
+      return this.$store.getters['user/user']
+    },
     loading() {
       return this.$store.state.user.loading
     },

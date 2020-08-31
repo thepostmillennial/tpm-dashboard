@@ -2,140 +2,71 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '@/router'
 
-import * as firebase from '@/services/firebase'
-import * as jwt from '@/services/jwt'
-
-const mapAuthProviders = {
-  firebase: {
-    login: firebase.login,
-    register: firebase.register,
-    currentAccount: firebase.currentAccount,
-    logout: firebase.logout,
-  },
-  jwt: {
-    login: jwt.login,
-    register: jwt.register,
-    currentAccount: jwt.currentAccount,
-    logout: jwt.logout,
-  },
-}
+import * as auth from '@/services/auth'
 
 Vue.use(Vuex)
 
 export default {
   namespaced: true,
   state: {
-    id: '',
-    name: '',
-    display_name: '',
-    email: '',
-    phone: '',
-    avatar: '',
-    roles: [],
-    authorized: false, // false is default value
+    user: null,
+    authorized: false,
     loading: false,
   },
 
   getters: {
-    user: state => state,
+    user: state => state.user,
+    authorized: state => state.authorized,
+    loading: state => state.loading,
   },
 
   mutations: {
     SET_STATE(state, payload) {
-      Object.assign(state, {
-        ...payload,
-      })
+      Object.assign(state, { ...payload })
+    },
+    SET_AUTH(state, user) {
+      state.user = user || null
+      state.authorized = Boolean(user)
     },
   },
-  actions: {
 
-    LOGIN({ commit, dispatch, rootState }, { payload }) {
+  actions: {
+    AUTH({ commit }, accessToken) {
+      const user = auth.retrieveAuth(accessToken)
+      if (user && user._id) {
+        commit('SET_AUTH', user)
+        return true
+      }
+      return false
+    },
+    LOGIN({ commit, dispatch }, { payload }) {
       const { identity, password } = payload
       commit('SET_STATE', { loading: true })
-
-      const login = mapAuthProviders[rootState.settings.authProvider].login
-      login(identity, password).then(success => {
-        if (success) {
-          dispatch('LOAD_CURRENT_ACCOUNT')
-          Vue.prototype.$notification.success({
-            message: 'Logged In',
-            description: 'You have successfully logged in to The Administration Dashboard for The Post Millennial!',
-          })
-        } else { commit('SET_STATE', { loading: false }) }
-      })
-    },
-
-    REGISTER({ commit, dispatch, rootState }, { payload }) {
-      const { email, password, name } = payload
-      commit('SET_STATE', { loading: true })
-
-      const register = mapAuthProviders[rootState.settings.authProvider].register
-      register(email, password, name).then(success => {
-        if (success) {
-          dispatch('LOAD_CURRENT_ACCOUNT')
-          Vue.prototype.$notification.success({
-            message: 'Succesful Registered',
-            description: 'You have successfully registered!',
-          })
-        } else {
-          commit('SET_STATE', { loading: false })
+      auth.login(identity, password).then(res => {
+        if (res) {
+          if (res.accessToken) dispatch('AUTH', res.accessToken)
+          Vue.prototype.$notification.success({ message: 'Logged In', description: 'You have successfully logged in Reno SMS' })
         }
+        commit('SET_STATE', { loading: false })
       })
     },
-
-    RETRIEVE_AUTHENTICATION({ commit }) {
-      const account = jwt.retrieveAccount()
-      if (account) {
-        commit('SET_STATE', {
-          id: account._id,
-          name: account.name,
-          display_name: account.display_name,
-          email: account.email,
-          phone: account.phone,
-          avatar: account.avatar,
-          roles: account.roles,
-          authorized: true,
-          loading: false,
-        })
-        router.push('/')
-      } else {
-        router.push('/auth/login')
-      }
-    },
-
-    LOAD_CURRENT_ACCOUNT({ commit, rootState }) {
+    REGISTER({ commit }, { payload }) {
+      const { name, username, email, password } = payload
       commit('SET_STATE', { loading: true })
-      const currentAccount = mapAuthProviders[rootState.settings.authProvider].currentAccount
-      currentAccount().then(account => {
-        if (account) {
-          commit('SET_STATE', {
-            id: account._id,
-            name: account.name,
-            display_name: account.display_name,
-            email: account.email,
-            phone: account.phone,
-            avatar: account.avatar,
-            roles: account.roles,
-            authorized: true,
-            loading: false,
-          })
-          router.push('/')
+      auth.register(name, username, email, password).then(success => {
+        if (success) {
+          Vue.prototype.$notification.success({ message: 'Succesful Registered', description: 'You have successfully registered!' })
+          router.push('/auth/login')
         }
         commit('SET_STATE', { loading: false })
       })
     },
 
-    LOGOUT({ commit, rootState }) {
-      const logout = mapAuthProviders[rootState.settings.authProvider].logout
-      logout().then(() => {
+    LOGOUT({ commit }) {
+      commit('SET_STATE', { loading: true })
+      auth.logout().then(() => {
         commit('SET_STATE', {
-          id: '',
-          name: '',
-          display_name: '',
-          email: '',
-          phone: '',
-          avatar: '',
-          roles: [],
+          user: null,
           authorized: false,
           loading: false,
         })

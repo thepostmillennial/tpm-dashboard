@@ -477,15 +477,13 @@ const router = new Router({
   ],
 })
 
-router.beforeEach((to, from, next) => {
+// router guarding:
+router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.authRequired)) {
-    if (!store.state.user.authorized) {
-      next({
-        path: '/auth/login',
-        query: { redirect: to.fullPath },
-      })
-    } else {
+    if (await store.dispatch('user/AUTH', null)) {
       next()
+    } else {
+      next({ path: '/auth/login', query: { redirect: to.fullPath } })
     }
   } else {
     next()
