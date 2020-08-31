@@ -22,7 +22,7 @@ const router = new Router({
         hidden: true,
       },
       children: [
-        // Content
+        // CONTENT
         // editorspicks
         {
           path: '/content/editorspicks',
@@ -31,7 +31,35 @@ const router = new Router({
           },
           component: () => import('./views/content/editorspicks'),
         },
-        // System
+        // MEMBERS
+        // members
+        {
+          name: 'members',
+          path: '/members/listing',
+          meta: {
+            title: 'Members Listing',
+          },
+          component: () => import('./views/members/listing'),
+        },
+        // member
+        {
+          name: 'member-detail',
+          path: '/members/member/:id',
+          meta: {
+            title: 'Member Detail',
+          },
+          component: () => import('./views/members/member'),
+        },
+        // membership
+        {
+          name: 'membership',
+          path: '/members/membership',
+          meta: {
+            title: 'membership',
+          },
+          component: () => import('./views/members/membership'),
+        },
+        // SYSTEM
         // users
         {
           name: 'system-users',

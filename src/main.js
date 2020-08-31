@@ -9,6 +9,7 @@ import NProgress from 'vue-nprogress'
 import VueLayers from 'vuelayers'
 import BootstrapVue from 'bootstrap-vue'
 import moment from 'vue-moment'
+import animated from 'animate.css'
 
 import App from './App.vue'
 import router from './router'
@@ -20,6 +21,7 @@ import './registerServiceWorker'
 // mocking api
 import './services/axios/fakeApi'
 
+Vue.use(animated)
 Vue.use(moment)
 Vue.use(BootstrapVue)
 Vue.use(VueLayers)
@@ -28,6 +30,8 @@ Vue.use(VuePageTitle, {
   prefix: 'TPM Dashboaard | ',
   router,
 })
+
+console.log(animated)
 
 Vue.config.productionTip = false
 const nprogress = new NProgress({ parent: 'body' })

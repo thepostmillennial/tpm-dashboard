@@ -54,8 +54,22 @@ export const getMenuData = [
     title: 'Members',
   },
   {
-    category: true,
-    title: 'Membership',
+    title: 'Members',
+    key: 'members',
+    icon: 'fe fe-edit',
+    roles: ['superadmin', 'admin', 'editor'],
+    children: [
+      {
+        title: 'Listing',
+        key: 'members-listing',
+        url: '/members/listing',
+      },
+      {
+        title: 'Membership',
+        key: 'members-membership',
+        url: '/members/membership',
+      },
+    ],
   },
   {
     category: true,

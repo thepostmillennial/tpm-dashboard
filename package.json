@@ -12,6 +12,7 @@
     "update:all": "git fetch && git pull && && npm install && npm run build"
   },
   "dependencies": {
+    "animate.css": "^4.1.0",
     "ant-design-vue": "^1.6.5",
     "axios": "^0.20.0",
     "axios-mock-adapter": "^1.18.2",
