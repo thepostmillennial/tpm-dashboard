@@ -25,21 +25,21 @@ const router = new Router({
         // CONTENT
         // editorspicks
         {
-          path: '/content/editorspicks',
+          path: '/content/picks',
           meta: {
             title: 'Editors\' Picks',
           },
-          component: () => import('./views/content/editorspicks'),
+          component: () => import('./views/content/picks'),
         },
         // MEMBERS
         // members
         {
           name: 'members',
-          path: '/members/listing',
+          path: '/members',
           meta: {
-            title: 'Members Listing',
+            title: 'Members',
           },
-          component: () => import('./views/members/listing'),
+          component: () => import('./views/members'),
         },
         // member
         {
@@ -58,6 +58,23 @@ const router = new Router({
             title: 'membership',
           },
           component: () => import('./views/members/membership'),
+        },
+        // contribution
+        {
+          name: 'contributions',
+          path: '/contributions',
+          meta: {
+            title: 'Contribution',
+          },
+          component: () => import('./views/contributions'),
+        },
+        {
+          name: 'reminders',
+          path: '/contributions/reminders',
+          meta: {
+            title: 'Contribution Reminders',
+          },
+          component: () => import('./views/contributions/reminders'),
         },
         // SYSTEM
         // users

@@ -17,6 +17,10 @@ export default {
     members: {
       members: '/members',
     },
+    contributions: {
+      base: '/contributions',
+      reminders: '/contributions/reminders',
+    },
     system: {
       users: '/users',
       user_by_username: '/users/username',

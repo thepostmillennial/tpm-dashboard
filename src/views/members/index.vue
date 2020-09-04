@@ -89,6 +89,7 @@ export default {
           title: 'Status',
           key: 'systems.status',
           width: '80px',
+          align: 'center',
           filters: [
             {
               text: 'Pending',

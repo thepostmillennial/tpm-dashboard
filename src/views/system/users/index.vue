@@ -20,7 +20,7 @@
               :dataSource="users"
               :rowKey="(record, index) => record._id"
               :customRow="rowClick"
-              :scroll="{ x: 1200, y: '100%' }"
+              :scroll="{ x: 1100, y: '100%' }"
             >
               <span slot="avatar" slot-scope="user">
                 <a-avatar shape="square" :size="28" :src="user.avatar" />

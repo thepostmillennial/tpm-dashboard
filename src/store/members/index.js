@@ -24,8 +24,8 @@ export default {
     member: null,
     query: {
       pagination: DEFAULT_PAGINATION,
-      filters: DEFAULT_SORTER,
-      sorter: null,
+      filters: null,
+      sorter: DEFAULT_SORTER,
     },
     meta: {
       total: 25,

@@ -4,6 +4,7 @@ import user from './user'
 import users from './users'
 import settings from './settings'
 import members from './members'
+import contributions from './contributions'
 
 Vue.use(Vuex)
 
@@ -13,6 +14,7 @@ export default new Vuex.Store({
     users,
     members,
     settings,
+    contributions,
   },
   state: {},
   mutations: {},

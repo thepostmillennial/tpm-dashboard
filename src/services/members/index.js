@@ -2,8 +2,8 @@ import apiClient from '@/services/axios'
 // import store from 'store'
 import config from '@/configs'
 
-// users functions
-// get all users
+// members functions
+// get all members
 export async function fetchMembers() {
   return apiClient
     .get(config.api.members.members)
@@ -16,7 +16,7 @@ export async function fetchMembers() {
     .catch(err => console.log(err))
 }
 
-// get users by query
+// get members by query
 export async function fetchMembersByQuery(query) {
   return apiClient
     .post(`${config.api.members.members}/query`, query)

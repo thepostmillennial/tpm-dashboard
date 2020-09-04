@@ -37,17 +37,11 @@ export const getMenuData = [
     title: 'Content',
   },
   {
-    title: 'Content',
-    key: 'content',
+    title: 'Editors\' Picks',
+    key: 'editorspicks',
+    url: '/content/picks',
     icon: 'fe fe-edit',
     roles: ['admin', 'editor'],
-    children: [
-      {
-        title: 'Editors\' Picks',
-        key: 'editorspicks',
-        url: '/content/editorspicks',
-      },
-    ],
   },
   {
     category: true,
@@ -56,46 +50,61 @@ export const getMenuData = [
   {
     title: 'Members',
     key: 'members',
-    icon: 'fe fe-edit',
+    url: '/members',
+    icon: 'fe fe-user',
     roles: ['superadmin', 'admin', 'editor'],
-    children: [
-      {
-        title: 'Listing',
-        key: 'members-listing',
-        url: '/members/listing',
-      },
-      {
-        title: 'Membership',
-        key: 'members-membership',
-        url: '/members/membership',
-      },
-    ],
+  },
+  {
+    title: 'Membership',
+    key: 'membership',
+    url: '/members/membership',
+    icon: 'fe fe-user-check',
+    roles: ['superadmin', 'admin', 'editor'],
+  },
+  {
+    category: true,
+    title: 'Contribution',
+  },
+  {
+    title: 'Contributions',
+    key: 'contributions',
+    url: '/contributions',
+    icon: 'fe fe-dollar-sign',
+    roles: ['superadmin', 'admin', 'editor'],
+  },
+  {
+    title: 'Reminders',
+    key: 'reminders',
+    url: '/contributions/reminders',
+    icon: 'fe fe-dollar-sign',
+    roles: ['superadmin', 'admin', 'editor'],
   },
   {
     category: true,
     title: 'Architectures',
   },
   {
+    title: 'Cache System',
+    key: 'cache-system',
+    url: '/system/cache',
+    icon: 'fe fe-hard-drive',
+    roles: ['superadmin', 'admin', 'editor'],
+  },
+  {
     category: true,
     title: 'System',
   },
   {
-    title: 'System',
-    key: 'system',
-    icon: 'fe fe-settings',
+    title: 'Users',
+    key: 'system-users',
+    url: '/system/users',
+    icon: 'fe fe-users',
     roles: ['superadmin', 'admin', 'editor'],
-    children: [
-      {
-        title: 'Users',
-        key: 'system-users',
-        url: '/system/users',
-      },
-    ],
   },
   {
-    title: 'Disabled Item',
-    key: 'disabledItem',
-    icon: 'fe fe-slash',
+    title: 'Danger Zone',
+    key: 'danger-zone',
+    icon: 'fe fe-alert-triangle',
     disabled: true,
   },
 ]
