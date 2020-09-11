@@ -26,7 +26,6 @@
               :columns="columns"
               :dataSource="members"
               :rowKey="(record, index) => record._id"
-              :customRow="rowClick"
               :scroll="{ x: 1000, y: '100%' }"
               :pagination="pagination"
               @change="change"
@@ -45,6 +44,20 @@
 
               <span slot="created_at" slot-scope="created_at">
                 <span> {{ created_at | moment('lll') }} </span>
+              </span>
+
+              <span slot="action" slot-scope="member">
+                <a-tooltip placement="left" title="Edit Member">
+                  <a class="text-primary" @click="editMember(member._id)"><i class="fe fe-edit"></i></a>
+                </a-tooltip>
+                <a-divider type="vertical" />
+                <a-tooltip placement="left" title="Join Membership">
+                  <a class="text-primary" @click="editMember(member._id)"> <i class="fe fe-award"></i></a>
+                </a-tooltip>
+                <a-divider type="vertical" />
+                <a-tooltip placement="left" title="Delete Member">
+                  <a class="text-primary" @click="editMember(member._id)"> <i class="fe fe-trash-2"></i></a>
+                </a-tooltip>
               </span>
               >
             </a-table>
@@ -145,6 +158,7 @@ export default {
           title: 'Email',
           dataIndex: 'email',
           key: 'email',
+          width: '200px',
           sorter: (a, b) => {
             return a.email.localeCompare(b.email)
           },
@@ -153,6 +167,7 @@ export default {
           title: 'Since',
           dataIndex: 'created_at',
           key: 'created_at',
+          width: '150px',
           sorter: (a, b) => {
             const ta = new Date(a.created_at)
             const tb = new Date(b.created_at)
@@ -161,15 +176,28 @@ export default {
           defaultSortOrder: 'descend',
           scopedSlots: { customRender: 'created_at' },
         },
+        {
+          title: 'Action',
+          key: 'action',
+          width: '100px',
+          align: 'right',
+          fixed: 'right',
+          scopedSlots: { customRender: 'action' },
+        },
       ],
     }
   },
   methods: {
-    rowClick: (record) => ({
-      on: {
-        click: (e) => router.push({ name: 'member-detail', params: { id: record._id } }),
-      },
-    }),
+    // rowClick: (record) => ({
+    //   on: {
+    //     click: (e) => router.push({ name: 'member-detail', params: { id: record._id } }),
+    //   },
+    // }),
+
+    editMember(id) {
+      router.push({ name: 'member-detail', params: { id } })
+    },
+
     change: (pagination, filters, sorter) => {
       store.dispatch('members/setQuery', { pagination, filters, sorter })
     },

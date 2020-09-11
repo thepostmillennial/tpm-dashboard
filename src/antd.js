@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import {
-  Avatar, TreeSelect, Rate, Breadcrumb, InputNumber, Steps,
+  Avatar, TreeSelect, Rate, Breadcrumb, Descriptions, InputNumber, Steps,
   Upload, Button, Layout, Table, Icon, Progress, Radio, Dropdown, Menu,
   Carousel, Input, Calendar, Badge, Slider, Form, FormModel, Tooltip, Select, Switch,
   Tag, Affix, Spin, Alert, Checkbox, Tabs, Pagination, notification, Drawer,
@@ -25,6 +25,7 @@ Vue.use(Button)
 Vue.use(Rate)
 Vue.use(TreeSelect)
 Vue.use(Breadcrumb)
+Vue.use(Descriptions)
 Vue.use(Layout)
 Vue.use(Table)
 Vue.use(Icon)
