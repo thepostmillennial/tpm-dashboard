@@ -22,9 +22,8 @@
     >
       <div :class="$style.logoContainer">
         <div :class="$style.logo">
-          <img src="/resources/images/logo.svg" class="mr-2" alt="Clean UI" />
+          <img src="/resources/images/dashboard.svg" class="mr-2" style="width: 24px" alt="TPM Dashboaard" />
           <div :class="$style.name">{{ settings.logo }}</div>
-          <div v-if="settings.logo === 'TPM Dashboaard'" :class="$style.descr">Vue</div>
         </div>
       </div>
       <vue-custom-scrollbar
@@ -43,7 +42,7 @@
           :inlineIndent="15"
           :class="$style.navigation"
         >
-          <template v-for="(item, index) in menuData">
+          <template v-for="(item, index) in menu">
             <template v-if="hasPermission(item.roles)">
               <a-menu-item-group :key="index" v-if="item.category">
                 <template slot="title">{{ item.title }}</template>
@@ -63,7 +62,6 @@ import { mapState, mapGetters } from 'vuex'
 import store from 'store'
 import find from 'lodash/find'
 import vueCustomScrollbar from 'vue-custom-scrollbar'
-import { getMenuData } from '@/services/menu'
 import SubMenu from './partials/submenu'
 import Item from './partials/item'
 
@@ -72,7 +70,6 @@ export default {
   components: { vueCustomScrollbar, SubMenu, Item },
   data() {
     return {
-      menuData: getMenuData,
       selectedKeys: [],
       openKeys: [],
     }
@@ -99,7 +96,7 @@ export default {
     },
     setSelectedKeys() {
       const pathname = this.$route.path
-      const menuData = this.menuData.concat()
+      const menuData = this.menu.concat()
       const flattenItems = (items, key) =>
         items.reduce((flattenedItems, item) => {
           flattenedItems.push(item)
@@ -122,6 +119,7 @@ export default {
   },
   computed: {
     ...mapState(['settings']),
+    ...mapState(['menu']),
     ...mapGetters('user', ['user']),
   },
   mounted() {

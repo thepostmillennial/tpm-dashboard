@@ -15,7 +15,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: 'dashboard/alpha',
+      redirect: 'dashboard',
       component: MainLayout,
       meta: {
         authRequired: true,
@@ -23,13 +23,22 @@ const router = new Router({
       },
       children: [
         // CONTENT
-        // editorspicks
+        // picks list
         {
           path: '/content/picks',
           meta: {
             title: 'Editors\' Picks',
           },
           component: () => import('./views/content/picks'),
+        },
+        // pick details
+        {
+          name: 'pick-detail',
+          path: '/content/pick/:id',
+          meta: {
+            title: 'Pick Detail',
+          },
+          component: () => import('./views/content/pick'),
         },
         // MEMBERS
         // members
@@ -96,9 +105,9 @@ const router = new Router({
         },
         // Dashboards
         {
-          path: '/dashboard/alpha',
+          path: '/dashboard',
           meta: {
-            title: 'Dashboard Alpha',
+            title: 'Dashboard',
           },
           component: () => import('./views/dashboard/alpha'),
         },

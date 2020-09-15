@@ -1,36 +1,14 @@
 export const getMenuData = [
   {
     category: true,
-    title: 'Dashboards',
+    title: 'Dashboard',
   },
   {
-    title: 'Dashboards',
-    key: 'dashboards',
-    icon: 'fe fe-home',
+    title: 'Dashboard',
+    key: 'dashboard',
+    url: '/dashboard',
+    icon: 'fe fe-layout',
     roles: ['superadmin', 'admin', 'editor'],
-    count: 0,
-    children: [
-      {
-        title: 'Dashboard Alpha',
-        key: 'dashboard',
-        url: '/dashboard/alpha',
-      },
-      {
-        title: 'Dashboard Beta',
-        key: 'dashboardBeta',
-        url: '/dashboard/beta',
-      },
-      {
-        title: 'Dashboard Gamma',
-        key: 'dashboardGamma',
-        url: '/dashboard/gamma',
-      },
-      {
-        title: 'Crypto Terminal',
-        key: 'dashboardCrypto',
-        url: '/dashboard/crypto',
-      },
-    ],
   },
   {
     category: true,
@@ -38,7 +16,7 @@ export const getMenuData = [
   },
   {
     title: 'Editors\' Picks',
-    key: 'editorspicks',
+    key: 'postpicks',
     url: '/content/picks',
     icon: 'fe fe-edit',
     roles: ['admin', 'editor'],
@@ -50,15 +28,9 @@ export const getMenuData = [
   {
     title: 'Members',
     key: 'members',
+    count: 0,
     url: '/members',
     icon: 'fe fe-user',
-    roles: ['superadmin', 'admin', 'editor'],
-  },
-  {
-    title: 'Membership',
-    key: 'membership',
-    url: '/members/membership',
-    icon: 'fe fe-user-check',
     roles: ['superadmin', 'admin', 'editor'],
   },
   {
@@ -68,6 +40,7 @@ export const getMenuData = [
   {
     title: 'Contributions',
     key: 'contributions',
+    count: 0,
     url: '/contributions',
     icon: 'fe fe-dollar-sign',
     roles: ['superadmin', 'admin', 'editor'],
@@ -75,6 +48,7 @@ export const getMenuData = [
   {
     title: 'Reminders',
     key: 'reminders',
+    count: 0,
     url: '/contributions/reminders',
     icon: 'fe fe-dollar-sign',
     roles: ['superadmin', 'admin', 'editor'],
@@ -97,6 +71,7 @@ export const getMenuData = [
   {
     title: 'Users',
     key: 'system-users',
+    count: 0,
     url: '/system/users',
     icon: 'fe fe-users',
     roles: ['superadmin', 'admin', 'editor'],

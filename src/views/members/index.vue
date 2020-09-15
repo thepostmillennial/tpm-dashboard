@@ -42,8 +42,12 @@
                 <span class="dot" :class="{ active: member.membership ? member.membership.activated : false }"></span>
               </span>
 
+              <span slot="source" slot-scope="source">
+                <span> {{ source | source }} </span>
+              </span>
+
               <span slot="created_at" slot-scope="created_at">
-                <span> {{ created_at | moment('lll') }} </span>
+                <span> {{ created_at | moment('l') }} </span>
               </span>
 
               <span slot="action" slot-scope="member">
@@ -56,7 +60,7 @@
                 </a-tooltip>
                 <a-divider type="vertical" />
                 <a-tooltip placement="left" title="Delete Member">
-                  <a class="text-primary" @click="editMember(member._id)"> <i class="fe fe-trash-2"></i></a>
+                  <a class="text-danger" @click="editMember(member._id)"> <i class="fe fe-trash-2"></i></a>
                 </a-tooltip>
               </span>
               >
@@ -77,6 +81,22 @@ export default {
     await store.dispatch('members/fetchMembers')
     next()
   },
+  filters: {
+    source(val) {
+      switch (val) {
+        case 'direct':
+          return 'Direct'
+        case 'sso-facebook':
+          return 'Facebook'
+        case 'sso-twitter':
+          return 'Twitter'
+        case 'sso-google':
+          return 'Google'
+        default:
+          return '---'
+      }
+    },
+  },
   data() {
     return {
       columns: [
@@ -92,7 +112,7 @@ export default {
           title: 'Username',
           dataIndex: 'username',
           key: 'username',
-          width: '220px',
+
           fixed: 'left',
           sorter: (a, b) => {
             return a.username.localeCompare(b.username)
@@ -158,16 +178,43 @@ export default {
           title: 'Email',
           dataIndex: 'email',
           key: 'email',
-          width: '200px',
+          width: '250px',
           sorter: (a, b) => {
             return a.email.localeCompare(b.email)
           },
         },
         {
+          title: 'Source',
+          dataIndex: 'source',
+          key: 'source',
+          width: '80px',
+          filters: [
+            {
+              text: 'Direct',
+              value: 'direct',
+            },
+            {
+              text: 'Google',
+              value: 'sso-google',
+            },
+            {
+              text: 'Facebook',
+              value: 'sso-facebook',
+            },
+            {
+              text: 'Twitter',
+              value: 'sso-twitter',
+            },
+          ],
+          filterMultiple: false,
+          onFilter: (source, member) => member.source.indexOf(source) === 0,
+          scopedSlots: { customRender: 'source' },
+        },
+        {
           title: 'Since',
           dataIndex: 'created_at',
           key: 'created_at',
-          width: '150px',
+          width: '90px',
           sorter: (a, b) => {
             const ta = new Date(a.created_at)
             const tb = new Date(b.created_at)
@@ -188,12 +235,6 @@ export default {
     }
   },
   methods: {
-    // rowClick: (record) => ({
-    //   on: {
-    //     click: (e) => router.push({ name: 'member-detail', params: { id: record._id } }),
-    //   },
-    // }),
-
     editMember(id) {
       router.push({ name: 'member-detail', params: { id } })
     },

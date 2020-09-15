@@ -21,6 +21,9 @@ export default {
       return this.$route.path
     },
   },
+  created() {
+    this.$store.dispatch('fetch_counts')
+  },
   mounted() {
     this.$store.commit('SET_PRIMARY_COLOR', {
       color: this.settings.primaryColor,

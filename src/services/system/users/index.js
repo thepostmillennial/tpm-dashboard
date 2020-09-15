@@ -8,37 +8,22 @@ import config from '@/configs'
 export async function fetchUsers() {
   return apiClient
     .get(config.api.system.users)
-    .then(res => {
-      if (res && res.data) {
-        return res.data
-      }
-      return false
-    })
-    .catch(err => console.log(err))
+    .then(res => (res && res.data) ? res.data : false)
+    .catch(err => console.error('[System/Users API]:', err))
 }
 
 // get user by username
 export async function fetchUserByUsername(username) {
   return apiClient
     .get(`${config.api.system.user_by_username}/${username}`)
-    .then(res => {
-      if (res && res.data) {
-        return res.data
-      }
-      return false
-    })
-    .catch(err => console.log(err))
+    .then(res => (res && res.data) ? res.data : false)
+    .catch(err => console.error('[System/Users API]:', err))
 }
 
 // get user by username
 export async function updateUser(user) {
   return apiClient
     .put(config.api.system.users, user)
-    .then(res => {
-      if (res && res.data) {
-        return res.data
-      }
-      return false
-    })
-    .catch(err => console.log(err))
+    .then(res => (res && res.data) ? res.data : false)
+    .catch(err => console.error('[System/Users API]:', err))
 }

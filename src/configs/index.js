@@ -11,15 +11,26 @@ export default {
       reset: '/auth/reset',
       account: '/auth/account',
     },
+    cms: {
+      base: '/cms',
+      posts: '/cms/posts',
+      posts_count: '/cms/posts/count',
+    },
     content: {
-      editorspicks: '/auth/editorspicks',
+      base: '/content',
+      picks: '/content/picks',
+      picks_redis: '/content/picks/redis',
+      picks_count: '/content/picks/count',
     },
     members: {
       members: '/members',
+      count: '/members/count',
     },
     contributions: {
       base: '/contributions',
+      count: '/contributions/count',
       reminders: '/contributions/reminders',
+      reminders_count: '/contributions/reminders/count',
     },
     system: {
       users: '/users',

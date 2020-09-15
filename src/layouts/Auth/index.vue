@@ -24,9 +24,9 @@
         >
           <div :class="$style.logoContainer">
             <div :class="$style.logo">
-              <img src="/resources/images/logo.svg" class="mr-2" alt="Clean UI" />
+              <img src="/resources/images/dashboard.svg" class="mr-2" style="width: 24px" alt="The Post Millennial" />
               <div :class="$style.name">{{ settings.logo }}</div>
-              <div v-if="settings.logo === 'TPM Dashboaard'" :class="$style.descr">Vue</div>
+              <div :class="$style.descr">The Post Millennial</div>
             </div>
           </div>
           <div class="d-none d-sm-block">
