@@ -78,6 +78,9 @@ export default {
       this.loading = true
       this.pick = store.getters['content/pick']
       this.fetchPicked()
+      setTimeout(() => {
+        this.removeDuplicates()
+      }, 3000)
     },
     abspath: (relpath) => `https://cms.thepostmillennial.com${relpath}`,
     gotBack() {

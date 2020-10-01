@@ -6,8 +6,8 @@ Vue.use(Vuex)
 
 const DEFAULT_PAGINATION = {
   current: 1,
-  pageSize: 200,
-  pageSizeOptions: ['10', '25', '35', '45', '100'],
+  pageSize: 100,
+  pageSizeOptions: ['25', '35', '45', '100', '200'],
   showQuickJumper: true,
   showSizeChanger: true,
 }
@@ -19,7 +19,7 @@ const DEFAULT_QUERY = {
   sorter: DEFAULT_SORTER,
 }
 const DEFAULT_META = {
-  total: 200,
+  total: 100,
 }
 
 export default {
