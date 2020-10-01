@@ -1,0 +1,79 @@
+<template>
+  <div class="view content pick-detail">
+    <div class="page">
+      <a-page-header :title="pick.name" :sub-title="pick._id" @back="() => $router.push('/content/picks')">
+        <template slot="tags">
+          <a-tag color="blue"> {{ pick.updated_at | moment('lll') }} </a-tag>
+        </template>
+        <template slot="extra">
+          <a-button key="1" type="primary"> Update </a-button>
+        </template>
+        {{ pick.description }}
+      </a-page-header>
+      <div class="content">
+        <div class="card p-3">{{ pick }}</div>
+        <div class="card px-1">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" v-for="post in posts" :key="post.id">
+              <div class="media py-3">
+                <img :src="post.feature_image" class="rounded mr-3 feature-image" :alt="post.title" />
+                <div class="media-body">
+                  <div class="mb-2">
+                    <small class="badge badge-light">{{ post.published_at | moment('lll') }}</small>
+                    <a-divider type="vertical" />
+                    <small>By {{ post.primary_author.name }} </small>
+                    <a-divider type="vertical" />
+                    <small style="color: #ff5722"> {{ post.primary_tag.name }}</small>
+                    <a-divider type="vertical" />
+                    <a :href="posturl(post.slug)" target="_blank">
+                      <small> <i class="fe fe-external-link"></i> View </small></a
+                    >
+                  </div>
+                  <h2 class="mt-0 font-size-18">{{ post.custom_excerpt }}</h2>
+                  {{ post.custom_excerpt }}
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import store from '@/store'
+
+export default {
+  async beforeRouteEnter(to, from, next) {
+    if (to.params.id) {
+      await store.dispatch('content/init', to.params.id)
+      next()
+    }
+  },
+  data() {
+    return {
+      pick: null,
+    }
+  },
+  computed: {
+    loading: () => store.getters['cms/loading'],
+    posts: () => store.getters['cms/posts'],
+  },
+  methods: {
+    abspath: (relpath) => `https://cms.thepostmillennial.com${relpath}`,
+    posturl: (slug) => `https://thepostmillennial.com/${slug}`,
+  },
+  async created() {
+    this.pick = store.getters['content/pick']
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.feature-image {
+  object-fit: cover;
+  width: 220px;
+  height: 150px;
+}
+</style>

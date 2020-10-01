@@ -45,7 +45,7 @@ export default {
       auth.login(identity, password).then(res => {
         if (res) {
           if (res.accessToken) dispatch('AUTH', res.accessToken)
-          Vue.prototype.$notification.success({ message: 'Logged In', description: 'You have successfully logged in Reno SMS' })
+          Vue.prototype.$notification.success({ message: 'Logged In', description: 'You have successfully logged in TPM Dashboard' })
         }
         commit('SET_STATE', { loading: false })
       })

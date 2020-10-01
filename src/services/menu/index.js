@@ -15,7 +15,7 @@ export const getMenuData = [
     title: 'Content',
   },
   {
-    title: 'Editors\' Picks',
+    title: "Editors' Picks",
     key: 'postpicks',
     url: '/content/picks',
     icon: 'fe fe-edit',
@@ -63,6 +63,7 @@ export const getMenuData = [
     url: '/system/cache',
     icon: 'fe fe-hard-drive',
     roles: ['superadmin', 'admin', 'editor'],
+    disabled: true,
   },
   {
     category: true,

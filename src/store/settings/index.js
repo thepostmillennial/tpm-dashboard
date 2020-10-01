@@ -4,9 +4,9 @@ import store from 'store'
 
 Vue.use(Vuex)
 
-const STORED_SETTINGS = storedSettings => {
+const STORED_SETTINGS = (storedSettings) => {
   const settings = {}
-  Object.keys(storedSettings).forEach(key => {
+  Object.keys(storedSettings).forEach((key) => {
     const item = store.get(`app.settings.${key}`)
     settings[key] = typeof item !== 'undefined' ? item : storedSettings[key]
   })
@@ -26,11 +26,11 @@ export default {
       isMenuCollapsed: false,
       menuLayoutType: 'left', // left, top, nomenu
       routerAnimation: 'slide-fadein-up', // none, slide-fadein-up, slide-fadein-right, fadein, zoom-fadein
-      menuColor: 'white', // white, dark, gray
+      menuColor: 'gray', // white, dark, gray
       theme: 'default', // default, dark
-      authPagesColor: 'white', // white, gray, image
+      authPagesColor: 'image', // white, gray, image
       primaryColor: '#4b7cf3',
-      leftMenuWidth: 256,
+      leftMenuWidth: 220,
       isMenuUnfixed: false,
       isMenuShadow: false,
       isTopbarFixed: false,
@@ -55,13 +55,15 @@ export default {
         const str = payload.redirect
         const subs = str.substring(str.indexOf('?') + 1)
         if (str.indexOf('?') >= 0) {
-          queryParams = JSON.parse('{"' + decodeURI(subs).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}')
+          queryParams = JSON.parse(
+            '{"' + decodeURI(subs).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}',
+          )
         }
       }
       delete queryParams.redirect
       keys = Object.keys(queryParams)
       if (keys.length) {
-        keys.forEach(key => {
+        keys.forEach((key) => {
           let value
           switch (queryParams[key]) {
             case 'false':
@@ -74,7 +76,9 @@ export default {
               value = queryParams[key]
               break
           }
-          if (key in state) { state[key] = value }
+          if (key in state) {
+            state[key] = value
+          }
         })
       }
     },
@@ -106,6 +110,6 @@ export default {
   },
   actions: {},
   getters: {
-    state: state => state,
+    state: (state) => state,
   },
 }

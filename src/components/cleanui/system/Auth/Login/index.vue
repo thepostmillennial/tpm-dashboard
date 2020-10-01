@@ -1,14 +1,13 @@
 <template>
   <div>
     <div class="text-center mb-5">
-      <h1 class="mb-5">
+      <div class="logo">
+        <img src="/resources/images/tpm-logo.svg" alt="TPM Logo">
+      </div>
+      <h1 class="mt-2 mb-5">
         <strong>Welcome to {{ settings.logo }}</strong>
       </h1>
-      <p>
-        The Administration Dashboard for The Post Millennial
-        <br />Credentials for testing purposes - <strong>demo@thepm.news</strong> /
-        <strong>demo123</strong>
-      </p>
+      <p>The Administration Dashboard for The Post Millennial</p>
     </div>
     <div class="card" :class="$style.container">
       <div class="text-dark font-size-24 mb-3">
@@ -22,7 +21,6 @@
             v-decorator="[
               'identity',
               {
-                initialValue: 'demo@thepm.news',
                 rules: [{ required: true, message: 'Please input your Username/Email!' }],
               },
             ]"
@@ -33,10 +31,7 @@
             size="large"
             placeholder="Password"
             type="password"
-            v-decorator="[
-              'password',
-              { initialValue: 'demo123', rules: [{ required: true, message: 'Please input your Password!' }] },
-            ]"
+            v-decorator="['password', { rules: [{ required: true, message: 'Please input your Password!' }] }]"
           />
         </a-form-item>
         <a-button type="primary" htmlType="submit" size="large" class="text-center w-100" :loading="loading">

@@ -10,22 +10,33 @@ export default {
     loading: false,
     picks: [],
     pick: null,
-
   },
   getters: {
-    loading: state => state.loading,
-    picks: state => state.picks,
-    pick: state => state.pick,
+    loading: (state) => state.loading,
+    picks: (state) => state.picks,
+    pick: (state) => state.pick,
   },
   mutations: {
-    SET_PICKS: (state, picks) => { state.picks = picks },
-    SET_PICK: (state, pick) => { state.pick = pick },
-    DELETE_PICK: (state, pick) => { state.pick = null },
-    START_LOADING: (state) => { state.loading = true },
-    END_LOADING: (state) => { state.loading = false },
+    UPDATE_PICK_VALUE: (state, pick) => {
+      state.pick = pick
+    },
+    SET_PICKS: (state, picks) => {
+      state.picks = picks
+    },
+    SET_PICK: (state, pick) => {
+      state.pick = pick
+    },
+    DELETE_PICK: (state, pick) => {
+      state.pick = null
+    },
+    START_LOADING: (state) => {
+      state.loading = true
+    },
+    END_LOADING: (state) => {
+      state.loading = false
+    },
   },
   actions: {
-
     // data initialaztion
     async init({ commit, dispatch }, id) {
       commit('START_LOADING')
@@ -35,6 +46,10 @@ export default {
     },
 
     // data handling
+
+    updatePickValue({ commit }, pick) {
+      commit('UPDATE_PICK_VALUE', pick)
+    },
     async fetchPicks({ commit }) {
       commit('START_LOADING')
       const picks = await contentService.fetchPicks()
@@ -72,6 +87,5 @@ export default {
       }
       commit('END_LOADING')
     },
-
   },
 }

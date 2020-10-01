@@ -31,8 +31,6 @@ Vue.use(VuePageTitle, {
   router,
 })
 
-console.log(animated)
-
 Vue.config.productionTip = false
 const nprogress = new NProgress({ parent: 'body' })
 
@@ -41,5 +39,5 @@ new Vue({
   store,
   nprogress,
   i18n,
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app')

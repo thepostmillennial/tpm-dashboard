@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const DEFAULT_PAGINATION = {
   current: 1,
-  pageSize: 25,
+  pageSize: 200,
   pageSizeOptions: ['10', '25', '35', '45', '100'],
   showQuickJumper: true,
   showSizeChanger: true,
@@ -19,7 +19,7 @@ const DEFAULT_QUERY = {
   sorter: DEFAULT_SORTER,
 }
 const DEFAULT_META = {
-  total: 25,
+  total: 200,
 }
 
 export default {
@@ -27,27 +27,38 @@ export default {
   state: {
     loading: false,
     posts: [],
+    pick_posts: [],
     post: null,
     query: DEFAULT_QUERY,
     meta: DEFAULT_META,
   },
   getters: {
-    loading: state => state.loading,
-    posts: state => state.posts,
-    query: state => state.query,
-    pagination: state => state.query.pagination,
-    filters: state => state.query.filters,
-    sorter: state => state.query.sorter,
-    meta: state => state.meta,
+    loading: (state) => state.loading,
+    posts: (state) => state.posts,
+    pick_posts: (state) => state.pick_posts,
+    query: (state) => state.query,
+    pagination: (state) => state.query.pagination,
+    filters: (state) => state.query.filters,
+    sorter: (state) => state.query.sorter,
+    meta: (state) => state.meta,
   },
   mutations: {
     INIT: (state) => {
       state.query = DEFAULT_QUERY
       state.meta = DEFAULT_META
     },
-    SET_POSTS: (state, posts) => { state.posts = posts },
-    SET_PAGINATION: (state, pagination) => { state.query.pagination = pagination },
-    SET_FILTERS: (state, filters) => { state.query.filters = filters },
+    SET_POSTS: (state, posts) => {
+      state.posts = posts
+    },
+    SET_PICK_POSTS: (state, posts) => {
+      state.pick_posts = posts
+    },
+    SET_PAGINATION: (state, pagination) => {
+      state.query.pagination = pagination
+    },
+    SET_FILTERS: (state, filters) => {
+      state.query.filters = filters
+    },
     SET_SORTER: (state, sorter) => {
       const { field, order } = sorter
       state.query.sorter = { field, order }
@@ -56,8 +67,12 @@ export default {
       state.meta = meta
       if (meta.total) state.query.pagination.total = meta.total
     },
-    START_LOADING: (state) => { state.loading = true },
-    END_LOADING: (state) => { state.loading = false },
+    START_LOADING: (state) => {
+      state.loading = true
+    },
+    END_LOADING: (state) => {
+      state.loading = false
+    },
   },
   actions: {
     // data handling
@@ -65,10 +80,13 @@ export default {
       commit('START_LOADING')
       const res = await cmsService.fetchPostsByQuery(state.query)
       if (res.posts) commit('SET_POSTS', res.posts)
+      if (res.posts) commit('SET_PICK_POSTS', res.posts)
       if (res.meta) commit('SET_POSTS_META', res.meta)
       commit('END_LOADING')
       return res.posts
     },
-
+    pick_posts({ commit }, posts) {
+      if (posts) commit('SET_PICK_POSTS', posts)
+    },
   },
 }

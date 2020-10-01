@@ -18,6 +18,7 @@ export default {
     },
     content: {
       base: '/content',
+      pick: '/content/pick',
       picks: '/content/picks',
       picks_redis: '/content/picks/redis',
       picks_count: '/content/picks/count',

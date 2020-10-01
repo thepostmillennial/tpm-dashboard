@@ -175,13 +175,13 @@
       <a
         href="javascript: void(0);"
         @click="toggleSidebar()"
-        style="bottom: calc(50% + 120px)"
+        style="bottom: 100px"
         :class="$style.cui__sidebar__toggleButton"
       >
         <i class="fe fe-settings" />
       </a>
     </a-tooltip>
-    <a-tooltip placement="left">
+    <a-tooltip placement="left" v-if="false">
       <template slot="title">
         <span>Switch Dark / Light Theme</span>
       </template>
@@ -195,7 +195,7 @@
         <i v-if="settings.theme !== 'default'" class="fe fe-sun" />
       </a>
     </a-tooltip>
-    <a-tooltip placement="left">
+    <a-tooltip placement="left" v-if="false">
       <template slot="title">
         <span>Set Primary Color</span>
       </template>
@@ -220,7 +220,7 @@
         <i class="fe fe-package" />
       </a>
     </a-tooltip>
-    <a-tooltip placement="left">
+    <a-tooltip placement="left" v-if="false">
       <template slot="title">
         <span>Documentation</span>
       </template>

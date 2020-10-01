@@ -16,7 +16,7 @@
     </div>
     <div :class="$style.navigation">
       <a-menu :mode="'horizontal'" :selectedKeys="selectedKeys" @click="handleClick">
-        <template v-for="item in menuData">
+        <template v-for="item in menu">
           <template v-if="hasPermission(item.roles)">
             <item v-if="!item.children && !item.category" :menu-info="item" :styles="$style" :key="item.key" />
             <sub-menu v-if="item.children" :menu-info="item" :styles="$style" :key="item.key" />
@@ -31,7 +31,6 @@
 import { mapState, mapGetters } from 'vuex'
 import store from 'store'
 import find from 'lodash/find'
-import { getMenuData } from '@/services/menu'
 import SubMenu from './partials/submenu'
 import Item from './partials/item'
 
@@ -40,6 +39,7 @@ export default {
   components: { SubMenu, Item },
   computed: {
     ...mapState(['settings']),
+    ...mapState(['menu']),
     ...mapGetters('user', ['user']),
   },
   mounted() {
@@ -48,7 +48,6 @@ export default {
   },
   data() {
     return {
-      menuData: getMenuData,
       selectedKeys: [],
       openKeys: [],
     }
@@ -75,7 +74,7 @@ export default {
     },
     setSelectedKeys() {
       const pathname = this.$route.path
-      const menuData = this.menuData.concat()
+      const menuData = this.menu.concat()
       const flattenItems = (items, key) =>
         items.reduce((flattenedItems, item) => {
           flattenedItems.push(item)

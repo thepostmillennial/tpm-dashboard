@@ -12,12 +12,12 @@
     "update:all": "git fetch && git pull && && npm install && npm run build"
   },
   "dependencies": {
-    "animate.css": "^4.1.0",
+    "animate.css": "^4.1.1",
     "ant-design-vue": "^1.6.5",
     "axios": "^0.20.0",
     "axios-mock-adapter": "^1.18.2",
     "bootstrap": "^4.5.2",
-    "bootstrap-vue": "^2.16.0",
+    "bootstrap-vue": "^2.17.0",
     "c3": "^0.7.20",
     "chart.js": "^2.9.3",
     "chartist-plugin-tooltips-updated": "^0.1.3",
