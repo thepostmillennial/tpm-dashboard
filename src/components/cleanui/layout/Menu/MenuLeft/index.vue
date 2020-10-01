@@ -22,7 +22,7 @@
     >
       <div :class="$style.logoContainer">
         <div :class="$style.logo">
-          <img src="/resources/images/dashboard.svg" class="mr-2" style="width: 24px" alt="TPM Dashboaard" />
+          <img src="/resources/images/dashboard.svg" class="mr-2" style="width: 24px" alt="TPM Dashboard" />
           <div :class="$style.name">{{ settings.logo }}</div>
         </div>
       </div>

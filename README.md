@@ -1,6 +1,6 @@
 # TPM Dashboard Project
 
-### TPM Dashboaard Admin Template Preview
+### TPM Dashboard Admin Template Preview
 
 https://vue.cleanui.cloud
 

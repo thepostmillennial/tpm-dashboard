@@ -17,7 +17,7 @@ export default {
   state: {
     ...STORED_SETTINGS({
       authProvider: 'jwt', // firebase, jwt
-      logo: 'TPM Dashboaard',
+      logo: 'TPM Dashboard',
       locale: 'en-US',
       isSidebarOpen: false,
       isSupportChatOpen: false,

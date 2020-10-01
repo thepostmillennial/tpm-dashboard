@@ -27,7 +27,7 @@ Vue.use(BootstrapVue)
 Vue.use(VueLayers)
 Vue.use(NProgress)
 Vue.use(VuePageTitle, {
-  prefix: 'TPM Dashboaard | ',
+  prefix: 'TPM Dashboard | ',
   router,
 })
 
